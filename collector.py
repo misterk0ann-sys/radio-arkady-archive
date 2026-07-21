@@ -55,6 +55,11 @@ USER_AGENT = (
 HASHTAG_RE = re.compile(r"(?<!\w)#([A-Za-z0-9_Α-Ωα-ωΆ-ώ]+)", re.UNICODE)
 
 
+class SearchExhausted(Exception):
+    """Raised when the public search source has no more available results."""
+
+
+
 def utc_now_iso() -> str:
     return dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat()
 
@@ -97,8 +102,15 @@ def request_json(params: dict[str, str | int]) -> dict[str, Any]:
         try:
             with urllib.request.urlopen(request, timeout=45) as response:
                 payload = json.loads(response.read().decode("utf-8"))
+                response_status = response.status
 
-            code = int(payload.get("code", response.status))
+            code = int(payload.get("code", response_status))
+
+            if code == 404:
+                raise SearchExhausted(
+                    payload.get("message") or "No more results are available."
+                )
+
             if code != 200:
                 raise RuntimeError(
                     f"API returned code {code}: {payload.get('message', '')}"
@@ -106,15 +118,36 @@ def request_json(params: dict[str, str | int]) -> dict[str, Any]:
 
             return payload
 
+        except urllib.error.HTTPError as exc:
+            # FxTwitter may answer 404 when a search has no results or a
+            # pagination cursor has reached the end. This is not a fatal error.
+            if exc.code == 404:
+                raise SearchExhausted(
+                    "The search source returned 404: no more available results."
+                ) from exc
+
+            if attempt >= MAX_RETRIES:
+                raise RuntimeError(
+                    f"Request failed after {attempt} attempts: {exc}"
+                ) from exc
+
+            wait = min(30.0, (2 ** attempt) + random.random())
+            print(
+                f"  Request error ({attempt}/{MAX_RETRIES}): {exc}. "
+                f"Retrying in {wait:.1f}s..."
+            )
+            time.sleep(wait)
+
         except (
-            urllib.error.HTTPError,
             urllib.error.URLError,
             TimeoutError,
             json.JSONDecodeError,
             RuntimeError,
         ) as exc:
             if attempt >= MAX_RETRIES:
-                raise RuntimeError(f"Request failed after {attempt} attempts: {exc}") from exc
+                raise RuntimeError(
+                    f"Request failed after {attempt} attempts: {exc}"
+                ) from exc
 
             wait = min(30.0, (2 ** attempt) + random.random())
             print(
@@ -326,9 +359,12 @@ def collect_tag(
 
         try:
             payload = request_json(params)
+        except SearchExhausted as exc:
+            print(f"  End of available results: {exc}")
+            break
         except RuntimeError as exc:
             error = str(exc)
-            print(f"  ERROR: {error}")
+            print(f"  WARNING: {error}")
             break
 
         results = payload.get("results")
@@ -467,7 +503,17 @@ def main() -> int:
     print(f"Counts: {type_counts}")
 
     failed = [item for item in reports if item.get("error")]
-    return 1 if len(failed) == len(HASHTAGS) else 0
+
+    if failed:
+        print(
+            f"Warnings: {len(failed)} search queries had temporary errors. "
+            "The archive and report were still saved."
+        )
+
+    # Always return success after archive.json and collection-report.json
+    # have been written. This allows the GitHub Action to commit partial
+    # results instead of discarding them when one query fails.
+    return 0
 
 
 if __name__ == "__main__":
