@@ -1,23 +1,23 @@
 #!/usr/bin/env python3
 """
-RADIO ARKADY public archive collector — free accumulator edition.
+RADIO ARKADY public archive collector — hashtag variants edition.
 
-What this version does:
-- Uses only the query parameters documented by FxEmbed:
-  q, feed, count and cursor.
-- Searches every RADIO ARKADY hashtag in all three feeds:
-  latest, top and media.
-- Follows available pagination cursors.
-- Saves every successful page immediately.
-- Preserves all posts already stored in archive.json.
-- Removes duplicates by post ID.
-- Can be run repeatedly; the archive grows whenever the public search
-  source returns posts not seen before.
+Why this version exists:
+The public FxTwitter search source may return different results depending
+on the exact capitalization of a hashtag. This collector tries several
+forms for every RADIO ARKADY hashtag, with and without #, and across the
+latest, top and media feeds.
 
-Important limitation:
-This is a best-effort free public archive. FxTwitter does not document a
-full historical date-range search. Deleted, private, unavailable and
-non-indexed posts may be missing.
+It:
+- preserves the existing archive.json
+- removes duplicates by post ID
+- saves after every successful page
+- records which canonical hashtag and exact query found each post
+- writes honest per-hashtag coverage counts to collection-report.json
+
+This remains a best-effort free archive. A zero result for a query means
+the public search source did not return data; it does not prove that no
+posts exist on X.
 """
 
 from __future__ import annotations
@@ -36,28 +36,57 @@ from pathlib import Path
 from typing import Any
 
 API_URL = "https://api.fxtwitter.com/2/search"
-
-HASHTAGS = [
-    "RADIO_ARKADY",
-    "ASK_ARKADY",
-    "NAI_POIOS_EINAI",
-    "ARKADIOS_ARKADYO",
-]
-
-FEEDS = ["latest", "top", "media"]
-
 ARCHIVE_FILE = Path("archive.json")
 REPORT_FILE = Path("collection-report.json")
 
+FEEDS = ["latest", "top", "media"]
 PAGE_SIZE = 100
-REQUEST_DELAY_SECONDS = 0.6
+REQUEST_DELAY_SECONDS = 0.55
 MAX_RETRIES = 4
 
 USER_AGENT = (
-    "Mozilla/5.0 (compatible; RadioArkadyArchive/3.0; "
+    "Mozilla/5.0 (compatible; RadioArkadyArchive/4.0; "
     "+https://github.com/)"
 )
 
+HASHTAG_SPECS = {
+    "RADIO_ARKADY": [
+        "#RADIO_ARKADY",
+        "#radio_arkady",
+        "#Radio_Arkady",
+        "RADIO_ARKADY",
+        "radio_arkady",
+        "Radio_Arkady",
+    ],
+    "ASK_ARKADY": [
+        "#ASK_ARKADY",
+        "#ask_arkady",
+        "#Ask_Arkady",
+        "ASK_ARKADY",
+        "ask_arkady",
+        "Ask_Arkady",
+    ],
+    "NAI_POIOS_EINAI": [
+        "#NAI_POIOS_EINAI",
+        "#nai_poios_einai",
+        "#Nai_poios_einai",
+        "#Nai_Poios_Einai",
+        "NAI_POIOS_EINAI",
+        "nai_poios_einai",
+        "Nai_poios_einai",
+        "Nai_Poios_Einai",
+    ],
+    "ARKADIOS_ARKADYO": [
+        "#ARKADIOS_ARKADYO",
+        "#arkadios_arkadyo",
+        "#Arkadios_Arkadyo",
+        "ARKADIOS_ARKADYO",
+        "arkadios_arkadyo",
+        "Arkadios_Arkadyo",
+    ],
+}
+
+KNOWN_TAGS = set(HASHTAG_SPECS)
 HASHTAG_RE = re.compile(
     r"(?<!\w)#([A-Za-z0-9_Α-Ωα-ωΆ-ώ]+)",
     re.UNICODE,
@@ -65,7 +94,7 @@ HASHTAG_RE = re.compile(
 
 
 class NoMoreResults(Exception):
-    """The public search returned 404 or no further timeline results."""
+    """The public search returned no results or no further timeline."""
 
 
 def utc_now_iso() -> str:
@@ -95,8 +124,7 @@ def write_json(path: Path, value: Any) -> None:
 
 
 def request_json(params: dict[str, str | int]) -> dict[str, Any]:
-    query = urllib.parse.urlencode(params)
-    url = f"{API_URL}?{query}"
+    url = f"{API_URL}?{urllib.parse.urlencode(params)}"
 
     for attempt in range(1, MAX_RETRIES + 1):
         request = urllib.request.Request(
@@ -116,23 +144,19 @@ def request_json(params: dict[str, str | int]) -> dict[str, Any]:
 
             if code == 404:
                 raise NoMoreResults(
-                    payload.get("message")
-                    or "No more available results."
+                    payload.get("message") or "No results available."
                 )
 
             if code != 200:
                 raise RuntimeError(
-                    f"API returned code {code}: "
-                    f"{payload.get('message', '')}"
+                    f"API returned code {code}: {payload.get('message', '')}"
                 )
 
             return payload
 
         except urllib.error.HTTPError as exc:
             if exc.code == 404:
-                raise NoMoreResults(
-                    "The search source returned 404."
-                ) from exc
+                raise NoMoreResults("The search source returned 404.") from exc
 
             if attempt >= MAX_RETRIES:
                 raise RuntimeError(
@@ -141,9 +165,8 @@ def request_json(params: dict[str, str | int]) -> dict[str, Any]:
 
             wait = min(30.0, (2 ** attempt) + random.random())
             print(
-                f"    Temporary HTTP error "
-                f"({attempt}/{MAX_RETRIES}): {exc}. "
-                f"Retrying in {wait:.1f}s..."
+                f"    Temporary HTTP error ({attempt}/{MAX_RETRIES}): "
+                f"{exc}. Retrying in {wait:.1f}s..."
             )
             time.sleep(wait)
 
@@ -160,9 +183,8 @@ def request_json(params: dict[str, str | int]) -> dict[str, Any]:
 
             wait = min(30.0, (2 ** attempt) + random.random())
             print(
-                f"    Temporary request error "
-                f"({attempt}/{MAX_RETRIES}): {exc}. "
-                f"Retrying in {wait:.1f}s..."
+                f"    Temporary request error ({attempt}/{MAX_RETRIES}): "
+                f"{exc}. Retrying in {wait:.1f}s..."
             )
             time.sleep(wait)
 
@@ -178,10 +200,7 @@ def raw_media_items(post: dict[str, Any]) -> list[dict[str, Any]]:
     combined = media.get("all")
 
     if isinstance(combined, list):
-        return [
-            item for item in combined
-            if isinstance(item, dict)
-        ]
+        return [item for item in combined if isinstance(item, dict)]
 
     items: list[dict[str, Any]] = []
 
@@ -189,10 +208,7 @@ def raw_media_items(post: dict[str, Any]) -> list[dict[str, Any]]:
         values = media.get(key)
 
         if isinstance(values, list):
-            items.extend(
-                item for item in values
-                if isinstance(item, dict)
-            )
+            items.extend(item for item in values if isinstance(item, dict))
 
     return items
 
@@ -248,7 +264,7 @@ def detect_types(post: dict[str, Any]) -> list[str]:
     for item in raw_media_items(post):
         item_type = str(item.get("type", "")).lower()
 
-        if item_type == "photo":
+        if item_type in ("photo", "image"):
             types.add("IMAGE")
         elif item_type == "video":
             types.add("VIDEO")
@@ -261,11 +277,23 @@ def detect_types(post: dict[str, Any]) -> list[str]:
     return sorted(types)
 
 
+def text_hashtags(text: str) -> list[str]:
+    output: set[str] = set()
+
+    for match in HASHTAG_RE.findall(text):
+        canonical = match.upper()
+
+        if canonical in KNOWN_TAGS:
+            output.add(canonical)
+
+    return sorted(output)
+
+
 def normalize_post(
     post: dict[str, Any],
-    searched_tag: str,
-    feed: str,
+    canonical_tag: str,
     query_variant: str,
+    feed: str,
 ) -> dict[str, Any] | None:
     post_id = str(post.get("id", "")).strip()
 
@@ -278,11 +306,6 @@ def normalize_post(
         author = {}
 
     text = str(post.get("text", ""))
-
-    found_hashtags = sorted(
-        {match.upper() for match in HASHTAG_RE.findall(text)}
-    )
-
     media = [
         normalize_media(item)
         for item in raw_media_items(post)
@@ -290,6 +313,9 @@ def normalize_post(
     media = [item for item in media if item]
 
     username = author.get("screen_name")
+
+    hashtags = set(text_hashtags(text))
+    hashtags.add(canonical_tag)
 
     return {
         "id": post_id,
@@ -311,10 +337,10 @@ def normalize_post(
         "reposts": post.get("reposts", 0),
         "quotes": post.get("quotes", 0),
         "replies": post.get("replies", 0),
-        "hashtags": found_hashtags,
-        "matched_queries": [searched_tag],
-        "matched_feeds": [feed],
+        "hashtags": sorted(hashtags),
+        "matched_queries": [canonical_tag],
         "matched_query_variants": [query_variant],
+        "matched_feeds": [feed],
         "types": detect_types(post),
         "media": media,
         "collected_at": utc_now_iso(),
@@ -332,10 +358,10 @@ def merge_post(
     merged.update(current)
 
     for key in (
-        "matched_queries",
-        "matched_feeds",
-        "matched_query_variants",
         "hashtags",
+        "matched_queries",
+        "matched_query_variants",
+        "matched_feeds",
     ):
         old_values = previous.get(key, [])
         new_values = current.get(key, [])
@@ -380,32 +406,8 @@ def save_archive(
     write_json(ARCHIVE_FILE, archive_list(posts_by_id))
 
 
-def count_types(
-    archive: list[dict[str, Any]],
-) -> dict[str, int]:
-    counts = {
-        "ALL": len(archive),
-        "GIF": 0,
-        "IMAGE": 0,
-        "TEXT": 0,
-        "VIDEO": 0,
-    }
-
-    for post in archive:
-        post_types = post.get("types", [])
-
-        if not isinstance(post_types, list):
-            continue
-
-        for content_type in ("GIF", "IMAGE", "TEXT", "VIDEO"):
-            if content_type in post_types:
-                counts[content_type] += 1
-
-    return counts
-
-
 def collect_query(
-    tag: str,
+    canonical_tag: str,
     query_variant: str,
     feed: str,
     max_pages: int,
@@ -419,7 +421,9 @@ def collect_query(
     stopped_by_404 = False
     error: str | None = None
 
-    print(f"\n  Query {query_variant!r} | feed={feed}")
+    print(
+        f"\n  {canonical_tag} | query={query_variant!r} | feed={feed}"
+    )
 
     for page_number in range(1, max_pages + 1):
         params: dict[str, str | int] = {
@@ -435,7 +439,7 @@ def collect_query(
             payload = request_json(params)
         except NoMoreResults:
             stopped_by_404 = True
-            print("    End of available results.")
+            print("    End/no results from source.")
             break
         except RuntimeError as exc:
             error = str(exc)
@@ -463,9 +467,9 @@ def collect_query(
 
             normalized = normalize_post(
                 raw_post,
-                tag,
-                feed,
+                canonical_tag,
                 query_variant,
+                feed,
             )
 
             if normalized is None:
@@ -484,7 +488,6 @@ def collect_query(
 
             page_changed = True
 
-        # Save after every successful page, even if all posts were duplicates.
         if page_changed:
             save_archive(posts_by_id)
 
@@ -509,7 +512,7 @@ def collect_query(
         time.sleep(REQUEST_DELAY_SECONDS)
 
     return {
-        "hashtag": tag,
+        "hashtag": canonical_tag,
         "query": query_variant,
         "feed": feed,
         "pages_completed": pages_completed,
@@ -520,18 +523,68 @@ def collect_query(
     }
 
 
+def count_content_types(
+    archive: list[dict[str, Any]],
+) -> dict[str, int]:
+    counts = {
+        "ALL": len(archive),
+        "GIF": 0,
+        "IMAGE": 0,
+        "TEXT": 0,
+        "VIDEO": 0,
+    }
+
+    for post in archive:
+        if not isinstance(post, dict):
+            continue
+
+        types = post.get("types", [])
+
+        if not isinstance(types, list):
+            continue
+
+        for content_type in ("GIF", "IMAGE", "TEXT", "VIDEO"):
+            if content_type in types:
+                counts[content_type] += 1
+
+    return counts
+
+
+def count_hashtags(
+    archive: list[dict[str, Any]],
+) -> dict[str, int]:
+    counts = {tag: 0 for tag in HASHTAG_SPECS}
+
+    for post in archive:
+        if not isinstance(post, dict):
+            continue
+
+        tags: set[str] = set()
+
+        for field in ("hashtags", "matched_queries"):
+            values = post.get(field, [])
+
+            if isinstance(values, list):
+                tags.update(str(value).upper() for value in values)
+
+        for tag in counts:
+            if tag in tags:
+                counts[tag] += 1
+
+    return counts
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(
         description=(
-            "Accumulate public RADIO ARKADY posts from supported "
-            "FxTwitter search feeds."
+            "Collect RADIO ARKADY posts using hashtag case variants."
         )
     )
     parser.add_argument(
         "--pages",
         type=int,
         default=250,
-        help="Maximum pages per query and feed (1–1000).",
+        help="Maximum pages per query/feed (1–1000).",
     )
     args = parser.parse_args()
 
@@ -552,59 +605,77 @@ def main() -> int:
     initial_count = len(posts_by_id)
     query_reports: list[dict[str, Any]] = []
 
-    print("RADIO ARKADY free accumulator")
+    print("RADIO ARKADY hashtag variants collector")
     print(f"Previous archive count: {initial_count}")
     print(f"Maximum pages per query/feed: {max_pages}")
 
-    for tag in HASHTAGS:
-        print(f"\n=== #{tag} ===")
+    for canonical_tag, variants in HASHTAG_SPECS.items():
+        print(f"\n=== {canonical_tag} ===")
 
-        # Both forms are used because public search behavior may differ.
-        query_variants = [f"#{tag}", tag]
-
-        for query_variant in query_variants:
+        # dict.fromkeys removes accidental duplicate variants while
+        # preserving their order.
+        for query_variant in dict.fromkeys(variants):
             for feed in FEEDS:
-                report = collect_query(
-                    tag,
-                    query_variant,
-                    feed,
-                    max_pages,
-                    posts_by_id,
+                query_reports.append(
+                    collect_query(
+                        canonical_tag,
+                        query_variant,
+                        feed,
+                        max_pages,
+                        posts_by_id,
+                    )
                 )
-                query_reports.append(report)
                 time.sleep(REQUEST_DELAY_SECONDS)
 
     archive = archive_list(posts_by_id)
 
-    # Preserve an existing non-empty archive even when a run returns nothing.
     if archive or not ARCHIVE_FILE.exists():
         write_json(ARCHIVE_FILE, archive)
 
-    counts = count_types(archive)
+    content_counts = count_content_types(archive)
+    hashtag_counts = count_hashtags(archive)
+
+    query_success = {
+        tag: {
+            "queries_with_results": 0,
+            "pages_completed": 0,
+            "raw_posts_received": 0,
+        }
+        for tag in HASHTAG_SPECS
+    }
+
+    for item in query_reports:
+        tag = str(item.get("hashtag", ""))
+
+        if tag not in query_success:
+            continue
+
+        pages = int(item.get("pages_completed", 0) or 0)
+        raw = int(item.get("raw_posts_received", 0) or 0)
+
+        query_success[tag]["pages_completed"] += pages
+        query_success[tag]["raw_posts_received"] += raw
+
+        if raw > 0:
+            query_success[tag]["queries_with_results"] += 1
 
     report = {
-        "status": (
-            "ok"
-            if archive
-            else "no_results_or_source_unavailable"
-        ),
+        "status": "ok" if archive else "no_results_or_source_unavailable",
         "started_at": started_at,
         "finished_at": utc_now_iso(),
-        "search_mode": "free_accumulator",
-        "feeds": FEEDS,
+        "search_mode": "hashtag_case_variants",
         "previous_archive_count": initial_count,
         "current_archive_count": len(archive),
-        "new_unique_posts": max(
-            0,
-            len(archive) - initial_count,
-        ),
-        "counts": counts,
+        "new_unique_posts": max(0, len(archive) - initial_count),
+        "counts": content_counts,
+        "hashtag_counts_minimum": hashtag_counts,
+        "hashtag_query_coverage": query_success,
         "queries": query_reports,
         "source": API_URL,
         "notice": (
-            "Best-effort public archive. The source does not document "
-            "full historical date-range search. Deleted, private, "
-            "unavailable or non-indexed posts may be absent."
+            "The per-hashtag counts are minimum verified counts from "
+            "the posts returned by the free public search source. They "
+            "must not be interpreted as complete historical totals."
         ),
     }
 
@@ -614,9 +685,10 @@ def main() -> int:
     print(f"Previous unique posts: {initial_count}")
     print(f"Current unique posts:  {len(archive)}")
     print(f"New unique posts:      {report['new_unique_posts']}")
-    print(f"Counts: {counts}")
+    print(f"Content counts:        {content_counts}")
+    print(f"Hashtag minimums:      {hashtag_counts}")
+    print(f"Query coverage:        {query_success}")
 
-    # Always allow GitHub Actions to commit the report and any partial data.
     return 0
 
 
