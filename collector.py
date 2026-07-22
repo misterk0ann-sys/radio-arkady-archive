@@ -1,27 +1,28 @@
 #!/usr/bin/env python3
 """
-RADIO ARKADY public archive collector — monthly backfill edition.
+RADIO ARKADY public archive collector — free accumulator edition.
 
-This script searches the configured hashtags month by month from 2020
-through today. Splitting the search into date windows gives the public
-search source a better chance of returning older posts instead of only
-the newest global results.
+What this version does:
+- Uses only the query parameters documented by FxEmbed:
+  q, feed, count and cursor.
+- Searches every RADIO ARKADY hashtag in all three feeds:
+  latest, top and media.
+- Follows available pagination cursors.
+- Saves every successful page immediately.
+- Preserves all posts already stored in archive.json.
+- Removes duplicates by post ID.
+- Can be run repeatedly; the archive grows whenever the public search
+  source returns posts not seen before.
 
-It preserves every post already stored in archive.json and never replaces
-a non-empty archive with an empty result set.
-
-Source:
-    https://api.fxtwitter.com/2/search
-
-Important:
-This remains a best-effort public archive. Deleted, private, unavailable,
-or non-indexed posts cannot be guaranteed.
+Important limitation:
+This is a best-effort free public archive. FxTwitter does not document a
+full historical date-range search. Deleted, private, unavailable and
+non-indexed posts may be missing.
 """
 
 from __future__ import annotations
 
 import argparse
-import calendar
 import datetime as dt
 import json
 import random
@@ -32,7 +33,7 @@ import urllib.error
 import urllib.parse
 import urllib.request
 from pathlib import Path
-from typing import Any, Iterator
+from typing import Any
 
 API_URL = "https://api.fxtwitter.com/2/search"
 
@@ -43,16 +44,17 @@ HASHTAGS = [
     "ARKADIOS_ARKADYO",
 ]
 
+FEEDS = ["latest", "top", "media"]
+
 ARCHIVE_FILE = Path("archive.json")
 REPORT_FILE = Path("collection-report.json")
 
-START_DATE = dt.date(2020, 1, 1)
 PAGE_SIZE = 100
-REQUEST_DELAY_SECONDS = 0.45
-MAX_TRANSIENT_RETRIES = 4
+REQUEST_DELAY_SECONDS = 0.6
+MAX_RETRIES = 4
 
 USER_AGENT = (
-    "Mozilla/5.0 (compatible; RadioArkadyArchive/2.0; "
+    "Mozilla/5.0 (compatible; RadioArkadyArchive/3.0; "
     "+https://github.com/)"
 )
 
@@ -62,8 +64,8 @@ HASHTAG_RE = re.compile(
 )
 
 
-class NoResults(Exception):
-    """The API returned 404: no results or timeline unavailable."""
+class NoMoreResults(Exception):
+    """The public search returned 404 or no further timeline results."""
 
 
 def utc_now_iso() -> str:
@@ -92,24 +94,11 @@ def write_json(path: Path, value: Any) -> None:
     temporary.replace(path)
 
 
-def month_windows(
-    start: dt.date,
-    end_exclusive: dt.date,
-) -> Iterator[tuple[dt.date, dt.date]]:
-    current = dt.date(start.year, start.month, 1)
-
-    while current < end_exclusive:
-        last_day = calendar.monthrange(current.year, current.month)[1]
-        next_month = current + dt.timedelta(days=last_day)
-        yield current, min(next_month, end_exclusive)
-        current = next_month
-
-
 def request_json(params: dict[str, str | int]) -> dict[str, Any]:
     query = urllib.parse.urlencode(params)
     url = f"{API_URL}?{query}"
 
-    for attempt in range(1, MAX_TRANSIENT_RETRIES + 1):
+    for attempt in range(1, MAX_RETRIES + 1):
         request = urllib.request.Request(
             url,
             headers={
@@ -120,16 +109,15 @@ def request_json(params: dict[str, str | int]) -> dict[str, Any]:
 
         try:
             with urllib.request.urlopen(request, timeout=45) as response:
-                body = response.read().decode("utf-8")
-                payload = json.loads(body)
-                response_status = response.status
+                payload = json.loads(response.read().decode("utf-8"))
+                status = response.status
 
-            code = int(payload.get("code", response_status))
+            code = int(payload.get("code", status))
 
             if code == 404:
-                raise NoResults(
+                raise NoMoreResults(
                     payload.get("message")
-                    or "No results or timeline unavailable."
+                    or "No more available results."
                 )
 
             if code != 200:
@@ -142,11 +130,11 @@ def request_json(params: dict[str, str | int]) -> dict[str, Any]:
 
         except urllib.error.HTTPError as exc:
             if exc.code == 404:
-                raise NoResults(
-                    "No results or timeline unavailable."
+                raise NoMoreResults(
+                    "The search source returned 404."
                 ) from exc
 
-            if attempt >= MAX_TRANSIENT_RETRIES:
+            if attempt >= MAX_RETRIES:
                 raise RuntimeError(
                     f"HTTP request failed after {attempt} attempts: {exc}"
                 ) from exc
@@ -154,7 +142,7 @@ def request_json(params: dict[str, str | int]) -> dict[str, Any]:
             wait = min(30.0, (2 ** attempt) + random.random())
             print(
                 f"    Temporary HTTP error "
-                f"({attempt}/{MAX_TRANSIENT_RETRIES}): {exc}. "
+                f"({attempt}/{MAX_RETRIES}): {exc}. "
                 f"Retrying in {wait:.1f}s..."
             )
             time.sleep(wait)
@@ -165,7 +153,7 @@ def request_json(params: dict[str, str | int]) -> dict[str, Any]:
             json.JSONDecodeError,
             RuntimeError,
         ) as exc:
-            if attempt >= MAX_TRANSIENT_RETRIES:
+            if attempt >= MAX_RETRIES:
                 raise RuntimeError(
                     f"Request failed after {attempt} attempts: {exc}"
                 ) from exc
@@ -173,7 +161,7 @@ def request_json(params: dict[str, str | int]) -> dict[str, Any]:
             wait = min(30.0, (2 ** attempt) + random.random())
             print(
                 f"    Temporary request error "
-                f"({attempt}/{MAX_TRANSIENT_RETRIES}): {exc}. "
+                f"({attempt}/{MAX_RETRIES}): {exc}. "
                 f"Retrying in {wait:.1f}s..."
             )
             time.sleep(wait)
@@ -276,8 +264,8 @@ def detect_types(post: dict[str, Any]) -> list[str]:
 def normalize_post(
     post: dict[str, Any],
     searched_tag: str,
-    window_start: dt.date,
-    window_end: dt.date,
+    feed: str,
+    query_variant: str,
 ) -> dict[str, Any] | None:
     post_id = str(post.get("id", "")).strip()
 
@@ -325,9 +313,8 @@ def normalize_post(
         "replies": post.get("replies", 0),
         "hashtags": found_hashtags,
         "matched_queries": [searched_tag],
-        "matched_windows": [
-            f"{window_start.isoformat()}..{window_end.isoformat()}"
-        ],
+        "matched_feeds": [feed],
+        "matched_query_variants": [query_variant],
         "types": detect_types(post),
         "media": media,
         "collected_at": utc_now_iso(),
@@ -344,7 +331,12 @@ def merge_post(
     merged = dict(previous)
     merged.update(current)
 
-    for key in ("matched_queries", "matched_windows", "hashtags"):
+    for key in (
+        "matched_queries",
+        "matched_feeds",
+        "matched_query_variants",
+        "hashtags",
+    ):
         old_values = previous.get(key, [])
         new_values = current.get(key, [])
 
@@ -372,106 +364,25 @@ def timestamp_value(post: dict[str, Any]) -> float:
         return 0.0
 
 
-def save_archive(posts_by_id: dict[str, dict[str, Any]]) -> None:
-    archive = sorted(
+def archive_list(
+    posts_by_id: dict[str, dict[str, Any]],
+) -> list[dict[str, Any]]:
+    return sorted(
         posts_by_id.values(),
         key=timestamp_value,
         reverse=True,
     )
-    write_json(ARCHIVE_FILE, archive)
 
 
-def collect_window(
-    tag: str,
-    window_start: dt.date,
-    window_end: dt.date,
-    max_pages: int,
-) -> tuple[list[dict[str, Any]], dict[str, Any]]:
-    query = (
-        f"#{tag} "
-        f"since:{window_start.isoformat()} "
-        f"until:{window_end.isoformat()}"
-    )
-
-    collected: list[dict[str, Any]] = []
-    cursor: str | None = None
-    seen_cursors: set[str] = set()
-    pages_completed = 0
-    error: str | None = None
-    no_results = False
-
-    for page_number in range(1, max_pages + 1):
-        params: dict[str, str | int] = {
-            "q": query,
-            "feed": "latest",
-            "count": PAGE_SIZE,
-        }
-
-        if cursor:
-            params["cursor"] = cursor
-
-        try:
-            payload = request_json(params)
-        except NoResults:
-            no_results = True
-            break
-        except RuntimeError as exc:
-            error = str(exc)
-            print(f"    WARNING: {error}")
-            break
-
-        results = payload.get("results")
-
-        if not isinstance(results, list):
-            results = []
-
-        pages_completed += 1
-
-        for raw_post in results:
-            if not isinstance(raw_post, dict):
-                continue
-
-            normalized = normalize_post(
-                raw_post,
-                tag,
-                window_start,
-                window_end,
-            )
-
-            if normalized is not None:
-                collected.append(normalized)
-
-        cursor_object = payload.get("cursor")
-        next_cursor: str | None = None
-
-        if isinstance(cursor_object, dict):
-            bottom = cursor_object.get("bottom")
-
-            if bottom:
-                next_cursor = str(bottom)
-
-        if not results or not next_cursor:
-            break
-
-        if next_cursor == cursor or next_cursor in seen_cursors:
-            break
-
-        seen_cursors.add(next_cursor)
-        cursor = next_cursor
-        time.sleep(REQUEST_DELAY_SECONDS)
-
-    return collected, {
-        "hashtag": tag,
-        "window_start": window_start.isoformat(),
-        "window_end": window_end.isoformat(),
-        "pages_completed": pages_completed,
-        "posts_received": len(collected),
-        "no_results_or_unavailable": no_results,
-        "error": error,
-    }
+def save_archive(
+    posts_by_id: dict[str, dict[str, Any]],
+) -> None:
+    write_json(ARCHIVE_FILE, archive_list(posts_by_id))
 
 
-def count_types(archive: list[dict[str, Any]]) -> dict[str, int]:
+def count_types(
+    archive: list[dict[str, Any]],
+) -> dict[str, int]:
     counts = {
         "ALL": len(archive),
         "GIF": 0,
@@ -493,21 +404,138 @@ def count_types(archive: list[dict[str, Any]]) -> dict[str, int]:
     return counts
 
 
+def collect_query(
+    tag: str,
+    query_variant: str,
+    feed: str,
+    max_pages: int,
+    posts_by_id: dict[str, dict[str, Any]],
+) -> dict[str, Any]:
+    pages_completed = 0
+    raw_posts_received = 0
+    unique_added = 0
+    cursor: str | None = None
+    seen_cursors: set[str] = set()
+    stopped_by_404 = False
+    error: str | None = None
+
+    print(f"\n  Query {query_variant!r} | feed={feed}")
+
+    for page_number in range(1, max_pages + 1):
+        params: dict[str, str | int] = {
+            "q": query_variant,
+            "feed": feed,
+            "count": PAGE_SIZE,
+        }
+
+        if cursor:
+            params["cursor"] = cursor
+
+        try:
+            payload = request_json(params)
+        except NoMoreResults:
+            stopped_by_404 = True
+            print("    End of available results.")
+            break
+        except RuntimeError as exc:
+            error = str(exc)
+            print(f"    WARNING: {error}")
+            break
+
+        results = payload.get("results")
+
+        if not isinstance(results, list):
+            results = []
+
+        pages_completed += 1
+        raw_posts_received += len(results)
+
+        print(
+            f"    Page {page_number}/{max_pages}: "
+            f"{len(results)} results"
+        )
+
+        page_changed = False
+
+        for raw_post in results:
+            if not isinstance(raw_post, dict):
+                continue
+
+            normalized = normalize_post(
+                raw_post,
+                tag,
+                feed,
+                query_variant,
+            )
+
+            if normalized is None:
+                continue
+
+            post_id = str(normalized["id"])
+            was_new = post_id not in posts_by_id
+
+            posts_by_id[post_id] = merge_post(
+                posts_by_id.get(post_id),
+                normalized,
+            )
+
+            if was_new:
+                unique_added += 1
+
+            page_changed = True
+
+        # Save after every successful page, even if all posts were duplicates.
+        if page_changed:
+            save_archive(posts_by_id)
+
+        cursor_object = payload.get("cursor")
+        next_cursor: str | None = None
+
+        if isinstance(cursor_object, dict):
+            bottom = cursor_object.get("bottom")
+
+            if bottom:
+                next_cursor = str(bottom)
+
+        if not results or not next_cursor:
+            break
+
+        if next_cursor == cursor or next_cursor in seen_cursors:
+            print("    Cursor repeated; stopping safely.")
+            break
+
+        seen_cursors.add(next_cursor)
+        cursor = next_cursor
+        time.sleep(REQUEST_DELAY_SECONDS)
+
+    return {
+        "hashtag": tag,
+        "query": query_variant,
+        "feed": feed,
+        "pages_completed": pages_completed,
+        "raw_posts_received": raw_posts_received,
+        "unique_posts_added": unique_added,
+        "stopped_by_404": stopped_by_404,
+        "error": error,
+    }
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(
         description=(
-            "Collect public RADIO ARKADY posts month by month."
+            "Accumulate public RADIO ARKADY posts from supported "
+            "FxTwitter search feeds."
         )
     )
     parser.add_argument(
         "--pages",
         type=int,
-        default=25,
-        help="Maximum pages per hashtag per month (1–250).",
+        default=250,
+        help="Maximum pages per query and feed (1–1000).",
     )
     args = parser.parse_args()
 
-    max_pages = max(1, min(args.pages, 250))
+    max_pages = max(1, min(args.pages, 1000))
     started_at = utc_now_iso()
 
     existing = load_json(ARCHIVE_FILE, [])
@@ -522,81 +550,37 @@ def main() -> int:
     }
 
     initial_count = len(posts_by_id)
-    reports: list[dict[str, Any]] = []
-    total_received = 0
+    query_reports: list[dict[str, Any]] = []
 
-    today = dt.datetime.now(dt.timezone.utc).date()
-    end_exclusive = today + dt.timedelta(days=1)
-    windows = list(month_windows(START_DATE, end_exclusive))
-
-    print(
-        f"Monthly backfill from {START_DATE.isoformat()} "
-        f"through {today.isoformat()}"
-    )
-    print(f"Date windows: {len(windows)}")
-    print(f"Maximum pages per hashtag/month: {max_pages}")
+    print("RADIO ARKADY free accumulator")
+    print(f"Previous archive count: {initial_count}")
+    print(f"Maximum pages per query/feed: {max_pages}")
 
     for tag in HASHTAGS:
         print(f"\n=== #{tag} ===")
 
-        for index, (window_start, window_end) in enumerate(
-            windows,
-            start=1,
-        ):
-            collected, report = collect_window(
-                tag,
-                window_start,
-                window_end,
-                max_pages,
-            )
-            reports.append(report)
+        # Both forms are used because public search behavior may differ.
+        query_variants = [f"#{tag}", tag]
 
-            if collected:
-                print(
-                    f"  {window_start:%Y-%m}: "
-                    f"{len(collected)} posts"
+        for query_variant in query_variants:
+            for feed in FEEDS:
+                report = collect_query(
+                    tag,
+                    query_variant,
+                    feed,
+                    max_pages,
+                    posts_by_id,
                 )
-                total_received += len(collected)
+                query_reports.append(report)
+                time.sleep(REQUEST_DELAY_SECONDS)
 
-                for post in collected:
-                    post_id = str(post["id"])
-                    posts_by_id[post_id] = merge_post(
-                        posts_by_id.get(post_id),
-                        post,
-                    )
+    archive = archive_list(posts_by_id)
 
-                # Save immediately so partial progress is never lost.
-                save_archive(posts_by_id)
-
-            if index % 12 == 0:
-                print(
-                    f"  Progress: {index}/{len(windows)} months; "
-                    f"{len(posts_by_id)} unique posts stored"
-                )
-
-            time.sleep(REQUEST_DELAY_SECONDS)
-
-    archive = sorted(
-        posts_by_id.values(),
-        key=timestamp_value,
-        reverse=True,
-    )
-
-    # Never replace a non-empty archive with an empty one.
+    # Preserve an existing non-empty archive even when a run returns nothing.
     if archive or not ARCHIVE_FILE.exists():
         write_json(ARCHIVE_FILE, archive)
 
     counts = count_types(archive)
-
-    windows_with_results = sum(
-        1 for item in reports
-        if item.get("posts_received", 0) > 0
-    )
-
-    windows_with_errors = sum(
-        1 for item in reports
-        if item.get("error")
-    )
 
     report = {
         "status": (
@@ -606,26 +590,21 @@ def main() -> int:
         ),
         "started_at": started_at,
         "finished_at": utc_now_iso(),
-        "search_mode": "monthly_backfill",
-        "start_date": START_DATE.isoformat(),
-        "end_date": today.isoformat(),
-        "max_pages_per_hashtag_per_month": max_pages,
+        "search_mode": "free_accumulator",
+        "feeds": FEEDS,
         "previous_archive_count": initial_count,
         "current_archive_count": len(archive),
         "new_unique_posts": max(
             0,
             len(archive) - initial_count,
         ),
-        "raw_posts_received": total_received,
-        "windows_checked": len(reports),
-        "windows_with_results": windows_with_results,
-        "windows_with_errors": windows_with_errors,
         "counts": counts,
-        "queries": reports,
+        "queries": query_reports,
         "source": API_URL,
         "notice": (
-            "Best-effort public archive. Deleted, private, unavailable, "
-            "or non-indexed posts may be absent."
+            "Best-effort public archive. The source does not document "
+            "full historical date-range search. Deleted, private, "
+            "unavailable or non-indexed posts may be absent."
         ),
     }
 
@@ -635,13 +614,10 @@ def main() -> int:
     print(f"Previous unique posts: {initial_count}")
     print(f"Current unique posts:  {len(archive)}")
     print(f"New unique posts:      {report['new_unique_posts']}")
-    print(f"Windows with results:  {windows_with_results}")
-    print(f"Windows with errors:   {windows_with_errors}")
     print(f"Counts: {counts}")
 
-    # A zero-result run should be visibly reported as a failure so that
-    # GitHub does not show a misleading green success.
-    return 0 if archive else 2
+    # Always allow GitHub Actions to commit the report and any partial data.
+    return 0
 
 
 if __name__ == "__main__":
