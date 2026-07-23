@@ -1,29 +1,29 @@
 {
   "status": "ok",
-  "started_at": "2026-07-22T10:55:42+00:00",
-  "finished_at": "2026-07-22T10:58:08+00:00",
+  "started_at": "2026-07-23T10:55:29+00:00",
+  "finished_at": "2026-07-23T10:58:56+00:00",
   "search_mode": "hashtag_case_variants",
   "previous_archive_count": 1140,
-  "current_archive_count": 1140,
-  "new_unique_posts": 0,
+  "current_archive_count": 1302,
+  "new_unique_posts": 162,
   "counts": {
-    "ALL": 1140,
-    "GIF": 346,
-    "IMAGE": 154,
-    "TEXT": 639,
-    "VIDEO": 1
+    "ALL": 1302,
+    "GIF": 355,
+    "IMAGE": 260,
+    "TEXT": 684,
+    "VIDEO": 3
   },
   "hashtag_counts_minimum": {
-    "RADIO_ARKADY": 1140,
-    "ASK_ARKADY": 6,
-    "NAI_POIOS_EINAI": 7,
+    "RADIO_ARKADY": 1302,
+    "ASK_ARKADY": 11,
+    "NAI_POIOS_EINAI": 10,
     "ARKADIOS_ARKADYO": 0
   },
   "hashtag_query_coverage": {
     "RADIO_ARKADY": {
-      "queries_with_results": 1,
-      "pages_completed": 10,
-      "raw_posts_received": 200
+      "queries_with_results": 4,
+      "pages_completed": 41,
+      "raw_posts_received": 820
     },
     "ASK_ARKADY": {
       "queries_with_results": 0,
@@ -46,38 +46,38 @@
       "hashtag": "RADIO_ARKADY",
       "query": "#RADIO_ARKADY",
       "feed": "latest",
-      "pages_completed": 10,
-      "raw_posts_received": 200,
+      "pages_completed": 25,
+      "raw_posts_received": 500,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
+      "stopped_by_404": false,
       "error": null
     },
     {
       "hashtag": "RADIO_ARKADY",
       "query": "#RADIO_ARKADY",
       "feed": "top",
-      "pages_completed": 0,
-      "raw_posts_received": 0,
-      "unique_posts_added": 0,
-      "stopped_by_404": true,
+      "pages_completed": 8,
+      "raw_posts_received": 122,
+      "unique_posts_added": 120,
+      "stopped_by_404": false,
       "error": null
     },
     {
       "hashtag": "RADIO_ARKADY",
       "query": "#RADIO_ARKADY",
       "feed": "media",
-      "pages_completed": 0,
-      "raw_posts_received": 0,
-      "unique_posts_added": 0,
-      "stopped_by_404": true,
+      "pages_completed": 4,
+      "raw_posts_received": 118,
+      "unique_posts_added": 42,
+      "stopped_by_404": false,
       "error": null
     },
     {
       "hashtag": "RADIO_ARKADY",
       "query": "#radio_arkady",
       "feed": "latest",
-      "pages_completed": 0,
-      "raw_posts_received": 0,
+      "pages_completed": 4,
+      "raw_posts_received": 80,
       "unique_posts_added": 0,
       "stopped_by_404": true,
       "error": null
