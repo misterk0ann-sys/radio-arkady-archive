@@ -1,0 +1,75 @@
+{
+  "status": "ok",
+  "generatedAt": "2026-07-24T12:32:31.029120+00:00",
+  "source": "arkady_verified_all_merged_v2.jsonl",
+  "totalPosts": 104428,
+  "invalidLines": 0,
+  "chunkCount": 13,
+  "chunks": [
+    {
+      "file": "archive-001.json",
+      "posts": 8204,
+      "bytes": 18872535
+    },
+    {
+      "file": "archive-002.json",
+      "posts": 8237,
+      "bytes": 18872433
+    },
+    {
+      "file": "archive-003.json",
+      "posts": 8576,
+      "bytes": 18872394
+    },
+    {
+      "file": "archive-004.json",
+      "posts": 8349,
+      "bytes": 18874085
+    },
+    {
+      "file": "archive-005.json",
+      "posts": 8186,
+      "bytes": 18873366
+    },
+    {
+      "file": "archive-006.json",
+      "posts": 8224,
+      "bytes": 18872750
+    },
+    {
+      "file": "archive-007.json",
+      "posts": 8437,
+      "bytes": 18872471
+    },
+    {
+      "file": "archive-008.json",
+      "posts": 8435,
+      "bytes": 18873251
+    },
+    {
+      "file": "archive-009.json",
+      "posts": 8464,
+      "bytes": 18872644
+    },
+    {
+      "file": "archive-010.json",
+      "posts": 8263,
+      "bytes": 18870216
+    },
+    {
+      "file": "archive-011.json",
+      "posts": 8251,
+      "bytes": 18873950
+    },
+    {
+      "file": "archive-012.json",
+      "posts": 8280,
+      "bytes": 18873710
+    },
+    {
+      "file": "archive-013.json",
+      "posts": 4522,
+      "bytes": 10276787
+    }
+  ]
+}
