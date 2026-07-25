@@ -1,0 +1,343 @@
+name: Build paged archive
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "arkady_web_archive/archive-index.json"
+      - "arkady_web_archive/archive-*.json"
+      - ".github/workflows/build-paged-archive.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build 100-post archive pages
+        shell: bash
+        run: |
+          cat > /tmp/build_paged_archive.py <<'PY'
+          from __future__ import annotations
+
+          import json
+          import shutil
+          from collections import Counter
+          from datetime import datetime
+          from pathlib import Path
+          from typing import Any, Iterable
+
+          SOURCE_DIR = Path("arkady_web_archive")
+          OUTPUT_DIR = Path("arkady_web_archive_paged")
+          PAGE_SIZE = 100
+
+          TARGET_TAGS = (
+              "#RADIO_ARKADY",
+              "#ASK_ARKADY",
+              "#NAI_POIOS_EINAI",
+              "#ARKADIOS_ARKADYO",
+          )
+
+
+          def as_list(value: Any) -> list[Any]:
+              if value is None:
+                  return []
+              return value if isinstance(value, list) else [value]
+
+
+          def parse_date(value: Any) -> datetime | None:
+              text = str(value or "").strip()
+              if not text:
+                  return None
+
+              try:
+                  return datetime.fromisoformat(text.replace("Z", "+00:00"))
+              except ValueError:
+                  pass
+
+              patterns = (
+                  "%a %b %d %H:%M:%S %z %Y",
+                  "%Y-%m-%d %H:%M:%S%z",
+                  "%Y-%m-%d %H:%M:%S",
+                  "%Y-%m-%d",
+              )
+
+              for pattern in patterns:
+                  try:
+                      return datetime.strptime(text, pattern)
+                  except ValueError:
+                      continue
+
+              return None
+
+
+          def text_of(post: dict[str, Any]) -> str:
+              return str(
+                  post.get("rawContent")
+                  or post.get("fullText")
+                  or post.get("text")
+                  or ""
+              )
+
+
+          def hashtags_of(post: dict[str, Any]) -> set[str]:
+              result: set[str] = set()
+              text = text_of(post).upper()
+
+              if isinstance(post.get("_archive_hashtags"), list):
+                  stored = post["_archive_hashtags"]
+              elif isinstance(post.get("hashtags"), list):
+                  stored = post["hashtags"]
+              else:
+                  stored = []
+
+              normalized_stored = {
+                  (
+                      str(value).upper()
+                      if str(value).startswith("#")
+                      else "#" + str(value).upper()
+                  )
+                  for value in stored
+              }
+
+              for target in TARGET_TAGS:
+                  if target in normalized_stored or target in text:
+                      result.add(target)
+
+              return result
+
+
+          def effective_media(post: dict[str, Any]) -> dict[str, Any]:
+              media = post.get("media")
+
+              if isinstance(media, dict) and any(
+                  as_list(media.get(key))
+                  for key in ("photos", "images", "animated", "gifs", "videos")
+              ):
+                  return media
+
+              retweeted = post.get("retweetedTweet")
+              if isinstance(retweeted, dict) and isinstance(retweeted.get("media"), dict):
+                  return retweeted["media"]
+
+              quoted = post.get("quotedTweet")
+              if isinstance(quoted, dict) and isinstance(quoted.get("media"), dict):
+                  return quoted["media"]
+
+              return {}
+
+
+          def types_of(post: dict[str, Any]) -> set[str]:
+              media = effective_media(post)
+              result: set[str] = set()
+
+              if as_list(media.get("animated") or media.get("gifs")):
+                  result.add("GIF")
+
+              if as_list(media.get("videos")):
+                  result.add("VIDEO")
+
+              if as_list(media.get("photos") or media.get("images")):
+                  result.add("IMAGE")
+
+              if not result:
+                  result.add("TEXT")
+
+              return result
+
+
+          def metadata(posts: Iterable[dict[str, Any]]) -> dict[str, Any]:
+              dates: list[datetime] = []
+              years: set[str] = set()
+              months: set[str] = set()
+              tags: set[str] = set()
+              types: set[str] = set()
+              tag_counts: Counter[str] = Counter()
+              type_counts: Counter[str] = Counter()
+
+              for post in posts:
+                  date = parse_date(post.get("date"))
+
+                  if date:
+                      dates.append(date)
+                      years.add(str(date.year))
+                      months.add(f"{date.year:04d}-{date.month:02d}")
+
+                  post_tags = hashtags_of(post)
+                  post_types = types_of(post)
+
+                  tags.update(post_tags)
+                  types.update(post_types)
+                  tag_counts.update(post_tags)
+                  type_counts.update(post_types)
+
+              return {
+                  "newestDate": max(dates).isoformat() if dates else "",
+                  "oldestDate": min(dates).isoformat() if dates else "",
+                  "years": sorted(years, reverse=True),
+                  "months": sorted(months, reverse=True),
+                  "tags": sorted(tags),
+                  "types": sorted(types),
+                  "tagCounts": dict(sorted(tag_counts.items())),
+                  "typeCounts": dict(sorted(type_counts.items())),
+              }
+
+
+          def write_json(path: Path, value: Any) -> int:
+              path.parent.mkdir(parents=True, exist_ok=True)
+
+              with path.open("w", encoding="utf-8") as handle:
+                  json.dump(
+                      value,
+                      handle,
+                      ensure_ascii=False,
+                      separators=(",", ":"),
+                  )
+
+              return path.stat().st_size
+
+
+          def main() -> None:
+              index_path = SOURCE_DIR / "archive-index.json"
+
+              if not index_path.exists():
+                  raise FileNotFoundError(f"Missing {index_path}")
+
+              with index_path.open("r", encoding="utf-8") as handle:
+                  source_index = json.load(handle)
+
+              chunks = source_index.get("chunks")
+
+              if not isinstance(chunks, list) or not chunks:
+                  raise ValueError(
+                      "archive-index.json does not contain a valid chunks list"
+                  )
+
+              if OUTPUT_DIR.exists():
+                  shutil.rmtree(OUTPUT_DIR)
+
+              OUTPUT_DIR.mkdir(parents=True)
+
+              parts: list[dict[str, Any]] = []
+              global_years: set[str] = set()
+              global_months: set[str] = set()
+              total_pages = 0
+              total_posts = 0
+
+              for part_number, chunk in enumerate(chunks, start=1):
+                  source_file = str(chunk["file"])
+                  chunk_path = SOURCE_DIR / source_file
+
+                  print(f"Reading {chunk_path}...")
+
+                  with chunk_path.open("r", encoding="utf-8") as handle:
+                      posts = json.load(handle)
+
+                  if not isinstance(posts, list):
+                      raise ValueError(f"{source_file} is not a JSON array")
+
+                  # Matches the existing archive viewer: newest post first.
+                  display_posts = list(reversed(posts))
+                  total_posts += len(display_posts)
+
+                  page_entries: list[dict[str, Any]] = []
+
+                  for offset in range(0, len(display_posts), PAGE_SIZE):
+                      page_number = offset // PAGE_SIZE + 1
+                      page_posts = display_posts[offset : offset + PAGE_SIZE]
+                      page_meta = metadata(page_posts)
+
+                      relative_file = (
+                          f"part-{part_number:03d}/"
+                          f"page-{page_number:03d}.json"
+                      )
+
+                      size_bytes = write_json(
+                          OUTPUT_DIR / relative_file,
+                          page_posts,
+                      )
+
+                      page_entries.append(
+                          {
+                              "page": page_number,
+                              "file": relative_file,
+                              "posts": len(page_posts),
+                              "bytes": size_bytes,
+                              **page_meta,
+                          }
+                      )
+
+                  part_meta = metadata(display_posts)
+                  global_years.update(part_meta["years"])
+                  global_months.update(part_meta["months"])
+                  total_pages += len(page_entries)
+
+                  parts.append(
+                      {
+                          "part": part_number,
+                          "sourceFile": source_file,
+                          "posts": len(display_posts),
+                          "pageCount": len(page_entries),
+                          "pageSize": PAGE_SIZE,
+                          "pages": page_entries,
+                          **part_meta,
+                      }
+                  )
+
+                  print(
+                      f"Part {part_number:02d}: "
+                      f"{len(display_posts):,} posts, "
+                      f"{len(page_entries):,} pages"
+                  )
+
+              output_index = {
+                  "status": "ok",
+                  "version": 1,
+                  "generatedAt": datetime.now().astimezone().isoformat(),
+                  "sourceGeneratedAt": source_index.get("generatedAt", ""),
+                  "totalPosts": total_posts,
+                  "partCount": len(parts),
+                  "pageSize": PAGE_SIZE,
+                  "totalPages": total_pages,
+                  "years": sorted(global_years, reverse=True),
+                  "months": sorted(global_months, reverse=True),
+                  "parts": parts,
+              }
+
+              write_json(OUTPUT_DIR / "paged-index.json", output_index)
+
+              print()
+              print(f"Created {OUTPUT_DIR / 'paged-index.json'}")
+              print(f"Total posts: {total_posts:,}")
+              print(f"Total small pages: {total_pages:,}")
+
+
+          if __name__ == "__main__":
+              main()
+          PY
+
+          python /tmp/build_paged_archive.py
+
+      - name: Commit generated paged archive
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add arkady_web_archive_paged
+
+          if git diff --cached --quiet; then
+            echo "No generated changes."
+          else
+            git commit -m "Build paged web archive"
+            git push
+          fi
