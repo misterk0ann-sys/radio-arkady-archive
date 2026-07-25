@@ -9,6 +9,7 @@ permissions:
 jobs:
   build-android-app:
     runs-on: ubuntu-latest
+    timeout-minutes: 25
 
     steps:
       - name: Check out repository
@@ -26,11 +27,19 @@ jobs:
       - name: Install Android 16 SDK
         shell: bash
         run: |
-          yes | sdkmanager --licenses >/dev/null
-          sdkmanager \
+          # sdkmanager may close the pipe after accepting all licences.
+          # With GitHub Actions pipefail this can return exit code 141,
+          # although the licences were accepted successfully.
+          set +o pipefail
+          yes | sdkmanager --licenses >/dev/null 2>&1 || true
+          set -o pipefail
+
+          sdkmanager --install \
             "platform-tools" \
             "platforms;android-36" \
             "build-tools;36.0.0"
+
+          sdkmanager --list_installed
 
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4
@@ -471,7 +480,8 @@ jobs:
         working-directory: radio-arkady-android
         shell: bash
         run: |
-          gradle --no-daemon clean assembleRelease
+          gradle --version
+          gradle --no-daemon --stacktrace clean assembleRelease
 
       - name: Prepare download files
         shell: bash
