@@ -1,0 +1,486 @@
+name: Build monthly archive
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "arkady_web_archive/archive-index.json"
+      - "arkady_web_archive/archive-*.json"
+      - ".github/workflows/build-monthly-archive.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: radio-arkady-monthly-archive
+  cancel-in-progress: true
+
+jobs:
+  build-monthly:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build monthly 50-post pages
+        shell: bash
+        run: |
+          cat > /tmp/build_monthly_archive.py <<'PY'
+          from __future__ import annotations
+
+          import hashlib
+          import json
+          import shutil
+          from collections import Counter, defaultdict
+          from datetime import datetime, timezone
+          from pathlib import Path
+          from typing import Any
+
+          SOURCE_DIR = Path("arkady_web_archive")
+          OUTPUT_DIR = Path("arkady_web_archive_monthly")
+          PAGE_SIZE = 50
+
+          TARGET_TAGS = (
+              "#RADIO_ARKADY",
+              "#ASK_ARKADY",
+              "#NAI_POIOS_EINAI",
+              "#ARKADIOS_ARKADYO",
+          )
+
+
+          def as_list(value: Any) -> list[Any]:
+              if value is None:
+                  return []
+              return value if isinstance(value, list) else [value]
+
+
+          def parse_date(value: Any) -> datetime | None:
+              text = str(value or "").strip()
+
+              if not text:
+                  return None
+
+              try:
+                  parsed = datetime.fromisoformat(
+                      text.replace("Z", "+00:00")
+                  )
+                  if parsed.tzinfo is None:
+                      parsed = parsed.replace(tzinfo=timezone.utc)
+                  return parsed.astimezone(timezone.utc)
+              except ValueError:
+                  pass
+
+              patterns = (
+                  "%a %b %d %H:%M:%S %z %Y",
+                  "%Y-%m-%d %H:%M:%S%z",
+                  "%Y-%m-%d %H:%M:%S",
+                  "%Y-%m-%d",
+              )
+
+              for pattern in patterns:
+                  try:
+                      parsed = datetime.strptime(text, pattern)
+                      if parsed.tzinfo is None:
+                          parsed = parsed.replace(tzinfo=timezone.utc)
+                      return parsed.astimezone(timezone.utc)
+                  except ValueError:
+                      continue
+
+              return None
+
+
+          def text_of(post: dict[str, Any]) -> str:
+              return str(
+                  post.get("rawContent")
+                  or post.get("fullText")
+                  or post.get("text")
+                  or ""
+              )
+
+
+          def post_id(post: dict[str, Any]) -> str:
+              direct = str(
+                  post.get("id")
+                  or post.get("id_str")
+                  or ""
+              ).strip()
+
+              if direct:
+                  return direct
+
+              user = post.get("user")
+              username = ""
+
+              if isinstance(user, dict):
+                  username = str(
+                      user.get("username")
+                      or user.get("screenName")
+                      or user.get("screen_name")
+                      or ""
+                  )
+
+              fingerprint = "\n".join(
+                  (
+                      username,
+                      str(post.get("date") or ""),
+                      text_of(post),
+                  )
+              )
+
+              return "fallback-" + hashlib.sha256(
+                  fingerprint.encode("utf-8")
+              ).hexdigest()
+
+
+          def hashtags_of(post: dict[str, Any]) -> set[str]:
+              text = text_of(post).upper()
+
+              if isinstance(post.get("_archive_hashtags"), list):
+                  stored = post["_archive_hashtags"]
+              elif isinstance(post.get("hashtags"), list):
+                  stored = post["hashtags"]
+              else:
+                  stored = []
+
+              normalized_stored = {
+                  (
+                      str(value).upper()
+                      if str(value).startswith("#")
+                      else "#" + str(value).upper()
+                  )
+                  for value in stored
+              }
+
+              return {
+                  target
+                  for target in TARGET_TAGS
+                  if target in normalized_stored or target in text
+              }
+
+
+          def effective_media(
+              post: dict[str, Any]
+          ) -> dict[str, Any]:
+              media = post.get("media")
+
+              if isinstance(media, dict) and any(
+                  as_list(media.get(key))
+                  for key in (
+                      "photos",
+                      "images",
+                      "animated",
+                      "gifs",
+                      "videos",
+                  )
+              ):
+                  return media
+
+              retweeted = post.get("retweetedTweet")
+              if (
+                  isinstance(retweeted, dict)
+                  and isinstance(retweeted.get("media"), dict)
+              ):
+                  return retweeted["media"]
+
+              quoted = post.get("quotedTweet")
+              if (
+                  isinstance(quoted, dict)
+                  and isinstance(quoted.get("media"), dict)
+              ):
+                  return quoted["media"]
+
+              return {}
+
+
+          def types_of(post: dict[str, Any]) -> set[str]:
+              media = effective_media(post)
+              result: set[str] = set()
+
+              if as_list(
+                  media.get("animated") or media.get("gifs")
+              ):
+                  result.add("GIF")
+
+              if as_list(media.get("videos")):
+                  result.add("VIDEO")
+
+              if as_list(
+                  media.get("photos") or media.get("images")
+              ):
+                  result.add("IMAGE")
+
+              if not result:
+                  result.add("TEXT")
+
+              return result
+
+
+          def write_json(path: Path, value: Any) -> int:
+              path.parent.mkdir(parents=True, exist_ok=True)
+
+              with path.open("w", encoding="utf-8") as handle:
+                  json.dump(
+                      value,
+                      handle,
+                      ensure_ascii=False,
+                      separators=(",", ":"),
+                  )
+
+              return path.stat().st_size
+
+
+          def main() -> None:
+              index_path = SOURCE_DIR / "archive-index.json"
+
+              if not index_path.exists():
+                  raise FileNotFoundError(
+                      f"Missing {index_path}"
+                  )
+
+              with index_path.open(
+                  "r",
+                  encoding="utf-8",
+              ) as handle:
+                  source_index = json.load(handle)
+
+              chunks = source_index.get("chunks")
+
+              if not isinstance(chunks, list) or not chunks:
+                  raise ValueError(
+                      "archive-index.json does not contain chunks"
+                  )
+
+              unique_posts: dict[str, dict[str, Any]] = {}
+
+              for chunk in chunks:
+                  source_file = str(chunk["file"])
+                  source_path = SOURCE_DIR / source_file
+
+                  print(f"Reading {source_path}...")
+
+                  with source_path.open(
+                      "r",
+                      encoding="utf-8",
+                  ) as handle:
+                      posts = json.load(handle)
+
+                  if not isinstance(posts, list):
+                      raise ValueError(
+                          f"{source_file} is not a JSON array"
+                      )
+
+                  for post in posts:
+                      if not isinstance(post, dict):
+                          continue
+
+                      unique_posts[post_id(post)] = post
+
+              grouped: dict[
+                  str,
+                  list[tuple[datetime, dict[str, Any]]]
+              ] = defaultdict(list)
+
+              undated: list[dict[str, Any]] = []
+
+              for post in unique_posts.values():
+                  parsed = parse_date(post.get("date"))
+
+                  if parsed is None:
+                      undated.append(post)
+                      continue
+
+                  month_key = (
+                      f"{parsed.year:04d}-{parsed.month:02d}"
+                  )
+
+                  grouped[month_key].append((parsed, post))
+
+              if OUTPUT_DIR.exists():
+                  shutil.rmtree(OUTPUT_DIR)
+
+              OUTPUT_DIR.mkdir(parents=True)
+
+              month_entries: list[dict[str, Any]] = []
+              overall_tag_counts: Counter[str] = Counter()
+              overall_type_counts: Counter[str] = Counter()
+              written_posts = 0
+              total_pages = 0
+
+              for month_key in sorted(
+                  grouped.keys(),
+                  reverse=True,
+              ):
+                  rows = grouped[month_key]
+
+                  rows.sort(
+                      key=lambda item: item[0],
+                      reverse=True,
+                  )
+
+                  posts = [post for _, post in rows]
+                  dates = [date for date, _ in rows]
+
+                  tag_counts: Counter[str] = Counter()
+                  type_counts: Counter[str] = Counter()
+
+                  for post in posts:
+                      post_tags = hashtags_of(post)
+                      post_types = types_of(post)
+
+                      tag_counts.update(post_tags)
+                      type_counts.update(post_types)
+                      overall_tag_counts.update(post_tags)
+                      overall_type_counts.update(post_types)
+
+                  page_count = (
+                      len(posts) + PAGE_SIZE - 1
+                  ) // PAGE_SIZE
+
+                  month_bytes = 0
+
+                  for offset in range(
+                      0,
+                      len(posts),
+                      PAGE_SIZE,
+                  ):
+                      page_number = (
+                          offset // PAGE_SIZE + 1
+                      )
+
+                      page_posts = posts[
+                          offset:offset + PAGE_SIZE
+                      ]
+
+                      page_path = (
+                          OUTPUT_DIR
+                          / month_key
+                          / f"page-{page_number:03d}.json"
+                      )
+
+                      month_bytes += write_json(
+                          page_path,
+                          page_posts,
+                      )
+
+                  year, month_number = month_key.split("-")
+
+                  month_entries.append(
+                      {
+                          "month": month_key,
+                          "year": int(year),
+                          "monthNumber": int(month_number),
+                          "posts": len(posts),
+                          "pageCount": page_count,
+                          "pageSize": PAGE_SIZE,
+                          "bytes": month_bytes,
+                          "newestDate": max(dates).isoformat(),
+                          "oldestDate": min(dates).isoformat(),
+                          "tagCounts": dict(
+                              sorted(tag_counts.items())
+                          ),
+                          "typeCounts": dict(
+                              sorted(type_counts.items())
+                          ),
+                      }
+                  )
+
+                  written_posts += len(posts)
+                  total_pages += page_count
+
+                  print(
+                      f"{month_key}: "
+                      f"{len(posts):,} posts, "
+                      f"{page_count:,} pages"
+                  )
+
+              years = sorted(
+                  {entry["year"] for entry in month_entries},
+                  reverse=True,
+              )
+
+              output_index = {
+                  "status": "ok",
+                  "version": 1,
+                  "generatedAt": (
+                      datetime.now(timezone.utc).isoformat()
+                  ),
+                  "sourceGeneratedAt": (
+                      source_index.get("generatedAt", "")
+                  ),
+                  "pageSize": PAGE_SIZE,
+                  "totalPosts": len(unique_posts),
+                  "datedPosts": written_posts,
+                  "undatedPosts": len(undated),
+                  "monthCount": len(month_entries),
+                  "totalPages": total_pages,
+                  "latestMonth": (
+                      month_entries[0]["month"]
+                      if month_entries
+                      else ""
+                  ),
+                  "oldestMonth": (
+                      month_entries[-1]["month"]
+                      if month_entries
+                      else ""
+                  ),
+                  "years": years,
+                  "overallTagCounts": dict(
+                      sorted(overall_tag_counts.items())
+                  ),
+                  "overallTypeCounts": dict(
+                      sorted(overall_type_counts.items())
+                  ),
+                  "months": month_entries,
+              }
+
+              write_json(
+                  OUTPUT_DIR / "month-index.json",
+                  output_index,
+              )
+
+              if undated:
+                  write_json(
+                      OUTPUT_DIR / "undated.json",
+                      undated,
+                  )
+
+              print()
+              print(
+                  "Created "
+                  f"{OUTPUT_DIR / 'month-index.json'}"
+              )
+              print(
+                  f"Unique posts: {len(unique_posts):,}"
+              )
+              print(
+                  f"Monthly pages: {total_pages:,}"
+              )
+
+
+          if __name__ == "__main__":
+              main()
+          PY
+
+          python /tmp/build_monthly_archive.py
+
+      - name: Commit generated monthly archive
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add arkady_web_archive_monthly
+
+          if git diff --cached --quiet; then
+            echo "No generated monthly changes."
+          else
+            git commit -m "Build monthly RADIO ARKADY archive"
+            git push
+          fi
