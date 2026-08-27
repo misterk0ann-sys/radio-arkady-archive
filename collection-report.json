@@ -1,7 +1,7 @@
 {
   "status": "ok",
-  "started_at": "2026-08-26T04:01:36+00:00",
-  "finished_at": "2026-08-26T04:03:17+00:00",
+  "started_at": "2026-08-27T14:09:00+00:00",
+  "finished_at": "2026-08-27T14:11:01+00:00",
   "search_mode": "hashtag_case_variants",
   "previous_archive_count": 1644,
   "current_archive_count": 1644,
@@ -37,7 +37,7 @@
     },
     "ARKADIOS_ARKADYO": {
       "queries_with_results": 0,
-      "pages_completed": 0,
+      "pages_completed": 1,
       "raw_posts_received": 0
     }
   },
@@ -706,10 +706,10 @@
       "hashtag": "ARKADIOS_ARKADYO",
       "query": "#Arkadios_Arkadyo",
       "feed": "latest",
-      "pages_completed": 0,
+      "pages_completed": 1,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
+      "stopped_by_404": false,
       "error": null
     },
     {
