@@ -1,7 +1,7 @@
 {
   "status": "ok",
-  "started_at": "2026-08-28T15:19:22+00:00",
-  "finished_at": "2026-08-28T15:21:25+00:00",
+  "started_at": "2026-08-29T10:00:59+00:00",
+  "finished_at": "2026-08-29T10:02:47+00:00",
   "search_mode": "hashtag_case_variants",
   "previous_archive_count": 1644,
   "current_archive_count": 1644,
@@ -21,9 +21,9 @@
   },
   "hashtag_query_coverage": {
     "RADIO_ARKADY": {
-      "queries_with_results": 1,
-      "pages_completed": 1,
-      "raw_posts_received": 20
+      "queries_with_results": 0,
+      "pages_completed": 0,
+      "raw_posts_received": 0
     },
     "ASK_ARKADY": {
       "queries_with_results": 0,
@@ -136,8 +136,8 @@
       "hashtag": "RADIO_ARKADY",
       "query": "RADIO_ARKADY",
       "feed": "latest",
-      "pages_completed": 1,
-      "raw_posts_received": 20,
+      "pages_completed": 0,
+      "raw_posts_received": 0,
       "unique_posts_added": 0,
       "stopped_by_404": true,
       "error": null
