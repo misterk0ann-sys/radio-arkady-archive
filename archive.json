@@ -51541,7 +51541,7 @@
       "screen_name": "VsLeNaN",
       "avatar_url": "https://pbs.twimg.com/profile_images/1497968003987775495/OrdqqB6P_200x200.jpg"
     },
-    "likes": 45,
+    "likes": 44,
     "reposts": 7,
     "quotes": 0,
     "replies": 3,
@@ -51552,10 +51552,12 @@
       "NAI_POIOS_EINAI"
     ],
     "matched_query_variants": [
-      "#Nai_Poios_Einai"
+      "#Nai_Poios_Einai",
+      "nai_poios_einai"
     ],
     "matched_feeds": [
-      "media"
+      "media",
+      "top"
     ],
     "types": [
       "IMAGE"
@@ -51569,7 +51571,7 @@
         "height": 960
       }
     ],
-    "collected_at": "2026-08-07T08:01:26+00:00"
+    "collected_at": "2026-09-05T07:39:41+00:00"
   },
   {
     "id": "1514718605979627522",
@@ -52096,6 +52098,48 @@
       }
     ],
     "collected_at": "2026-09-04T07:59:31+00:00"
+  },
+  {
+    "id": "1502069438992076802",
+    "url": "https://x.com/nisafi2008/status/1502069438992076802",
+    "text": "#nai_poios_einai\nΒρέχει; Χιονίζει; Δεν παραγγέλνουμε..",
+    "created_at": "Thu Mar 10 23:50:36 +0000 2022",
+    "created_timestamp": 1646956236,
+    "author": {
+      "id": "1236756476015915011",
+      "name": "Christos Trianta",
+      "screen_name": "nisafi2008",
+      "avatar_url": "https://pbs.twimg.com/profile_images/2036095870345572353/dhMi5jIn_200x200.jpg"
+    },
+    "likes": 56,
+    "reposts": 22,
+    "quotes": 0,
+    "replies": 2,
+    "hashtags": [
+      "NAI_POIOS_EINAI"
+    ],
+    "matched_queries": [
+      "NAI_POIOS_EINAI"
+    ],
+    "matched_query_variants": [
+      "nai_poios_einai"
+    ],
+    "matched_feeds": [
+      "top"
+    ],
+    "types": [
+      "IMAGE"
+    ],
+    "media": [
+      {
+        "id": "1502069435380781058",
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/FNhsMXPX0AIvr35.jpg?name=orig",
+        "width": 841,
+        "height": 1075
+      }
+    ],
+    "collected_at": "2026-09-05T07:39:41+00:00"
   },
   {
     "id": "1499515052193427465",
@@ -55666,6 +55710,40 @@
     "collected_at": "2026-08-07T08:01:26+00:00"
   },
   {
+    "id": "1425941902529024004",
+    "url": "https://x.com/noisymints/status/1425941902529024004",
+    "text": "με πήρε η μάνα μου τηλ τώρα από μπαρ κ εγώ είμαι σπίτι ρε μλκς κ ακούω αρκάντι #nai_poios_einai",
+    "created_at": "Thu Aug 12 22:06:56 +0000 2021",
+    "created_timestamp": 1628806016,
+    "author": {
+      "id": "98770526",
+      "name": "mints みんつ",
+      "screen_name": "noisymints",
+      "avatar_url": "https://pbs.twimg.com/profile_images/1694004909316644864/5d3dZW3W_200x200.jpg"
+    },
+    "likes": 40,
+    "reposts": 7,
+    "quotes": 0,
+    "replies": 1,
+    "hashtags": [
+      "NAI_POIOS_EINAI"
+    ],
+    "matched_queries": [
+      "NAI_POIOS_EINAI"
+    ],
+    "matched_query_variants": [
+      "nai_poios_einai"
+    ],
+    "matched_feeds": [
+      "top"
+    ],
+    "types": [
+      "TEXT"
+    ],
+    "media": [],
+    "collected_at": "2026-09-05T07:39:41+00:00"
+  },
+  {
     "id": "1423399568004329476",
     "url": "https://x.com/nisafi2008/status/1423399568004329476",
     "text": "#radio_arkady #ask_arkady Συντονιστικό Ομάδων & Δομών Αλληλεγγύης Αττικής @syntonistikoal\nΚάλεσμα Αλληλεγγύης για τις πληγείσες περιοχές στην Εύβοια, \nΣήμερα Παρασκευή 6 Αυγούστου\n#antireport #φωτιες #Πυρκαγια",
@@ -56032,6 +56110,40 @@
     "collected_at": "2026-08-07T08:01:26+00:00"
   },
   {
+    "id": "1418366958718816260",
+    "url": "https://x.com/aforfreedom1/status/1418366958718816260",
+    "text": "#nai_poios_einai και το αλλο ΨΕΜΑ του καπιταλισμου, με το οποιο μας μεγαλωνουν ΟΛΟΙ οι new age γονεις (οσοι κανανε παιδια απο το 95' και επειτα δλδ), οτι \"μπορεις να κανεις ο,τι θελεις στην ζωη σου αρκει να προσπαθησεις\". ΟΧΙ ΡΕ ΜΑΛΑΚΕΣ ΔΕ ΜΠΟΡΕΙΣ ΝΑ ΚΑΝΕΙΣ Ο,ΤΙ ΘΕΣ >>",
+    "created_at": "Fri Jul 23 00:26:49 +0000 2021",
+    "created_timestamp": 1627000009,
+    "author": {
+      "id": "1328682152117022720",
+      "name": "aforfreedom",
+      "screen_name": "aforfreedom1",
+      "avatar_url": "https://pbs.twimg.com/profile_images/1329526743674327040/-ujnDVOD_200x200.jpg"
+    },
+    "likes": 50,
+    "reposts": 3,
+    "quotes": 0,
+    "replies": 8,
+    "hashtags": [
+      "NAI_POIOS_EINAI"
+    ],
+    "matched_queries": [
+      "NAI_POIOS_EINAI"
+    ],
+    "matched_query_variants": [
+      "nai_poios_einai"
+    ],
+    "matched_feeds": [
+      "top"
+    ],
+    "types": [
+      "TEXT"
+    ],
+    "media": [],
+    "collected_at": "2026-09-05T07:39:41+00:00"
+  },
+  {
     "id": "1418339801942614019",
     "url": "https://x.com/njorar/status/1418339801942614019",
     "text": "Παιδιά, δούλευα χρόνια σε περίπτερο, νύχτα, στη γειτονιά μου.\nΠραγματικά ΔΕΝ μπορείτε να φανταστείτε πόσες φορές έχω πάει γυναίκες σπίτι τους επειδή τις ακολουθούσε κάποιος, ούτε εγώ θυμάμαι πια, σίγουρα δεκάδες.\nΕίναι τόσο κοινό που καταντά τραγικό.\n #nai_poios_einai",
@@ -56156,6 +56268,7 @@
       "RADIO_ARKADY"
     ],
     "matched_queries": [
+      "NAI_POIOS_EINAI",
       "RADIO_ARKADY"
     ],
     "matched_query_variants": [
@@ -56163,6 +56276,7 @@
       "#Radio_Arkady",
       "#radio_arkady",
       "RADIO_ARKADY",
+      "nai_poios_einai",
       "radio_arkady"
     ],
     "matched_feeds": [
@@ -56188,7 +56302,7 @@
         "height": 1242
       }
     ],
-    "collected_at": "2026-09-04T07:59:28+00:00"
+    "collected_at": "2026-09-05T07:39:41+00:00"
   },
   {
     "id": "1411473103847362567",
@@ -56768,6 +56882,40 @@
       }
     ],
     "collected_at": "2026-07-28T11:33:07+00:00"
+  },
+  {
+    "id": "1405637453638213635",
+    "url": "https://x.com/isidwra_m/status/1405637453638213635",
+    "text": "#nai_poios_einai \nΦιλαράκια μου, μια καλησπέρα κι από μένα και από τον γάτο μου τον Αριστοτέλη. Χτες στα Αρχαία πήγε πολύ καλά το πράγμα. Πάντα οι ευχές σας μου δίνουν δύναμη. Αύριο δίνω Κοινωνιολογία.  Ιβάνοβιτς ο πατερας μου σε χαιρετά και προτείνει να πω τον γάτο Μάρξ.Τι λές;",
+    "created_at": "Thu Jun 17 21:24:19 +0000 2021",
+    "created_timestamp": 1623965059,
+    "author": {
+      "id": "967093839298252800",
+      "name": "Isidwra",
+      "screen_name": "isidwra_m",
+      "avatar_url": "https://pbs.twimg.com/profile_images/1359216258550554624/anjcqluE_200x200.jpg"
+    },
+    "likes": 34,
+    "reposts": 3,
+    "quotes": 0,
+    "replies": 10,
+    "hashtags": [
+      "NAI_POIOS_EINAI"
+    ],
+    "matched_queries": [
+      "NAI_POIOS_EINAI"
+    ],
+    "matched_query_variants": [
+      "nai_poios_einai"
+    ],
+    "matched_feeds": [
+      "top"
+    ],
+    "types": [
+      "TEXT"
+    ],
+    "media": [],
+    "collected_at": "2026-09-05T07:39:41+00:00"
   },
   {
     "id": "1404916556715470858",
@@ -59996,6 +60144,40 @@
     "collected_at": "2026-09-04T07:59:33+00:00"
   },
   {
+    "id": "1390477190270177280",
+    "url": "https://x.com/mwro_almighty/status/1390477190270177280",
+    "text": "Όταν ο θυτης είναι Έλληνας, το θυμα έχει προκαλεσει, τόσο απλο..Αν μπορούσαν οι γαμωπουριτανοι, που ζουν στον γιδότοπο, θα έβγαζαν κ νόμο \"Βιάζουν μόνο ξένοι, τα δικά μας τα παιδια είναι της εκκλησίας, τα ξελογιάζουν οι τσούλες\".. \n#nai_poios_einai",
+    "created_at": "Fri May 07 01:22:50 +0000 2021",
+    "created_timestamp": 1620350570,
+    "author": {
+      "id": "2888423553",
+      "name": "🌟Θείο Βρέφος🌟",
+      "screen_name": "mwro_almighty",
+      "avatar_url": "https://pbs.twimg.com/profile_images/1797601498764812288/1ycHMW3E_200x200.jpg"
+    },
+    "likes": 226,
+    "reposts": 73,
+    "quotes": 1,
+    "replies": 1,
+    "hashtags": [
+      "NAI_POIOS_EINAI"
+    ],
+    "matched_queries": [
+      "NAI_POIOS_EINAI"
+    ],
+    "matched_query_variants": [
+      "nai_poios_einai"
+    ],
+    "matched_feeds": [
+      "top"
+    ],
+    "types": [
+      "TEXT"
+    ],
+    "media": [],
+    "collected_at": "2026-09-05T07:39:41+00:00"
+  },
+  {
     "id": "1390476594733621253",
     "url": "https://x.com/marykar29/status/1390476594733621253",
     "text": "Πρέπει να μπει η σεξουαλική διαπαιδαγωγηση στα σχολεία. Όχι δεν θα μάθουν στα παιδιά σας να κάνουν σεξ (γτ έχω ακούσει και τέτοιες μαλακίες) αλλά τουλάχιστον θα  διδαχτούν τι θα πει συναίνεση, κακοποίηση/παρενόχληση, πρόληψη προφυλάξεις κλπ. Έλεος κάπου. #nai_poios_einai",
@@ -60018,7 +60200,8 @@
       "NAI_POIOS_EINAI"
     ],
     "matched_query_variants": [
-      "#nai_poios_einai"
+      "#nai_poios_einai",
+      "nai_poios_einai"
     ],
     "matched_feeds": [
       "top"
@@ -60027,7 +60210,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-08-09T05:59:45+00:00"
+    "collected_at": "2026-09-05T07:39:41+00:00"
   },
   {
     "id": "1390473146965372937",
@@ -60231,7 +60414,8 @@
       "NAI_POIOS_EINAI"
     ],
     "matched_query_variants": [
-      "#nai_poios_einai"
+      "#nai_poios_einai",
+      "nai_poios_einai"
     ],
     "matched_feeds": [
       "top"
@@ -60248,7 +60432,7 @@
         "height": 404
       }
     ],
-    "collected_at": "2026-08-09T05:59:45+00:00"
+    "collected_at": "2026-09-05T07:39:41+00:00"
   },
   {
     "id": "1390430885695078400",
@@ -61472,7 +61656,7 @@
       "screen_name": "njorar",
       "avatar_url": "https://pbs.twimg.com/profile_images/1621957113617555457/orKvDdJz_200x200.jpg"
     },
-    "likes": 591,
+    "likes": 588,
     "reposts": 31,
     "quotes": 1,
     "replies": 93,
@@ -61483,7 +61667,8 @@
       "NAI_POIOS_EINAI"
     ],
     "matched_query_variants": [
-      "#nai_poios_einai"
+      "#nai_poios_einai",
+      "nai_poios_einai"
     ],
     "matched_feeds": [
       "top"
@@ -61492,7 +61677,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-07-28T11:33:07+00:00"
+    "collected_at": "2026-09-05T07:39:41+00:00"
   },
   {
     "id": "1381110676761018371",
@@ -62474,6 +62659,74 @@
     "collected_at": "2026-08-07T08:01:26+00:00"
   },
   {
+    "id": "1375239969078452232",
+    "url": "https://x.com/marykar29/status/1375239969078452232",
+    "text": "Στο πρώτο πρώτο μάθημα παγκόσμιας ιστορίας στο Ιστορικό Αρχαιολογικό, η καθηγήτρια μας είχε πει επί λεξει \"ξεχάστε ό, τι μάθατε στο σχολείο και τον τρόπο που διαβάζατε\"... Αυτό τα λέει όλα για το τι είδους ιστορία διδασκόμαστε στο σχολείο.... #Nai_poios_einai",
+    "created_at": "Fri Mar 26 00:15:34 +0000 2021",
+    "created_timestamp": 1616717734,
+    "author": {
+      "id": "945222752",
+      "name": "Mary K.",
+      "screen_name": "marykar29",
+      "avatar_url": "https://pbs.twimg.com/profile_images/1663526602565640192/dQzj5Bph_200x200.jpg"
+    },
+    "likes": 110,
+    "reposts": 15,
+    "quotes": 1,
+    "replies": 3,
+    "hashtags": [
+      "NAI_POIOS_EINAI"
+    ],
+    "matched_queries": [
+      "NAI_POIOS_EINAI"
+    ],
+    "matched_query_variants": [
+      "nai_poios_einai"
+    ],
+    "matched_feeds": [
+      "top"
+    ],
+    "types": [
+      "TEXT"
+    ],
+    "media": [],
+    "collected_at": "2026-09-05T07:39:41+00:00"
+  },
+  {
+    "id": "1375235860342390788",
+    "url": "https://x.com/LVikatou/status/1375235860342390788",
+    "text": "Ο Γλέζος κάποτε είχε πει πως το σύστημα έχει ανάγκη να προβάλλει ήρωες για να νιώθουν οι άλλοι λίγοι για να αντιδράσουν. Και είχε φέρει τον εαυτό του ως παράδειγμα (\"ούτε ήρωας, ούτε προδότης\"), λέγοντας πως όλα είναι ένα ένα κλικ του μυαλού απέναντι στην αδικία. #Nai_poios_einai",
+    "created_at": "Thu Mar 25 23:59:14 +0000 2021",
+    "created_timestamp": 1616716754,
+    "author": {
+      "id": "2719711853",
+      "name": "Lygeri Vikatou",
+      "screen_name": "LVikatou",
+      "avatar_url": "https://pbs.twimg.com/profile_images/1979935457317138433/8fMkHqhV_200x200.jpg"
+    },
+    "likes": 125,
+    "reposts": 29,
+    "quotes": 1,
+    "replies": 3,
+    "hashtags": [
+      "NAI_POIOS_EINAI"
+    ],
+    "matched_queries": [
+      "NAI_POIOS_EINAI"
+    ],
+    "matched_query_variants": [
+      "nai_poios_einai"
+    ],
+    "matched_feeds": [
+      "top"
+    ],
+    "types": [
+      "TEXT"
+    ],
+    "media": [],
+    "collected_at": "2026-09-05T07:39:41+00:00"
+  },
+  {
     "id": "1375222523340713989",
     "url": "https://x.com/nisafi2008/status/1375222523340713989",
     "text": "#Nai_poios_einai #ergnews\nTo «έγκλημά» του είναι ότι πάλεψε για μέτρα ασφαλείας  στο ογκολογικό Νοσοκομείο - Άγιος Σάββας (Αθήνα).\nΟΧΙ στην απόλυση του Αγωνιστή γιατρού Κώστα Καταραχιά!!!\nhttps://thepressproject.gr/to-egklima-tou-einai-oti-palepse-gia-metra-se-ogkologiko-nosokomeio-tora-apolyetai-ekdikitika-apo-to-esy/",
@@ -63118,7 +63371,8 @@
     ],
     "matched_query_variants": [
       "#NAI_POIOS_EINAI",
-      "#nai_poios_einai"
+      "#nai_poios_einai",
+      "nai_poios_einai"
     ],
     "matched_feeds": [
       "top"
@@ -63127,7 +63381,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-08-09T05:59:45+00:00"
+    "collected_at": "2026-09-05T07:39:41+00:00"
   },
   {
     "id": "1372697964741820420",
@@ -63187,7 +63441,8 @@
     ],
     "matched_query_variants": [
       "#NAI_POIOS_EINAI",
-      "#nai_poios_einai"
+      "#nai_poios_einai",
+      "nai_poios_einai"
     ],
     "matched_feeds": [
       "top"
@@ -63196,7 +63451,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-08-09T05:59:45+00:00"
+    "collected_at": "2026-09-05T07:39:41+00:00"
   },
   {
     "id": "1372696433229508614",
@@ -63610,7 +63865,8 @@
     ],
     "matched_query_variants": [
       "#NAI_POIOS_EINAI",
-      "#nai_poios_einai"
+      "#nai_poios_einai",
+      "nai_poios_einai"
     ],
     "matched_feeds": [
       "top"
@@ -63619,7 +63875,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-08-09T05:59:45+00:00"
+    "collected_at": "2026-09-05T07:39:41+00:00"
   },
   {
     "id": "1370177579190255616",
@@ -63686,10 +63942,12 @@
       "NAI_POIOS_EINAI"
     ],
     "matched_query_variants": [
-      "#Nai_Poios_Einai"
+      "#Nai_Poios_Einai",
+      "nai_poios_einai"
     ],
     "matched_feeds": [
-      "media"
+      "media",
+      "top"
     ],
     "types": [
       "IMAGE"
@@ -63703,7 +63961,7 @@
         "height": 486
       }
     ],
-    "collected_at": "2026-08-07T08:01:26+00:00"
+    "collected_at": "2026-09-05T07:39:41+00:00"
   },
   {
     "id": "1370136560998481923",
@@ -64234,7 +64492,8 @@
       "NAI_POIOS_EINAI"
     ],
     "matched_query_variants": [
-      "#NAI_POIOS_EINAI"
+      "#NAI_POIOS_EINAI",
+      "nai_poios_einai"
     ],
     "matched_feeds": [
       "top"
@@ -64243,7 +64502,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-08-07T08:01:10+00:00"
+    "collected_at": "2026-09-05T07:39:41+00:00"
   },
   {
     "id": "1364393754375946241",
@@ -65477,6 +65736,48 @@
     "collected_at": "2026-09-04T07:59:30+00:00"
   },
   {
+    "id": "1345500468932464640",
+    "url": "https://x.com/aggelokrousmeni/status/1345500468932464640",
+    "text": "Ναι γειά σας #nai_poios_einai",
+    "created_at": "Sat Jan 02 22:41:24 +0000 2021",
+    "created_timestamp": 1609627284,
+    "author": {
+      "id": "3021441947",
+      "name": "Γγέλω",
+      "screen_name": "aggelokrousmeni",
+      "avatar_url": "https://pbs.twimg.com/profile_images/2090518648670543872/nicOQwLz_200x200.jpg"
+    },
+    "likes": 58,
+    "reposts": 6,
+    "quotes": 0,
+    "replies": 3,
+    "hashtags": [
+      "NAI_POIOS_EINAI"
+    ],
+    "matched_queries": [
+      "NAI_POIOS_EINAI"
+    ],
+    "matched_query_variants": [
+      "nai_poios_einai"
+    ],
+    "matched_feeds": [
+      "top"
+    ],
+    "types": [
+      "IMAGE"
+    ],
+    "media": [
+      {
+        "id": "1345500463324688386",
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/EqwtiumXcAIzG8I.jpg?name=orig",
+        "width": 824,
+        "height": 824
+      }
+    ],
+    "collected_at": "2026-09-05T07:39:41+00:00"
+  },
+  {
     "id": "1344823445419384837",
     "url": "https://x.com/despoula_/status/1344823445419384837",
     "text": "Όλα καλά (μάλλον) #radio_arkady",
@@ -65773,6 +66074,82 @@
       }
     ],
     "collected_at": "2026-09-04T07:59:33+00:00"
+  },
+  {
+    "id": "1341704250028679173",
+    "url": "https://x.com/provokatoras4/status/1341704250028679173",
+    "text": "Κάναμε λάθος...\nΔεν είναι κότα...\nΕίναι κλώσσα...\nΗ ντροπή της πόλης 🐔🐔🐔#bbxeftiles\n#bbxeftilesgr\n#loveit #Nai_poios_einai \n#survivorGR",
+    "created_at": "Wed Dec 23 11:16:35 +0000 2020",
+    "created_timestamp": 1608722195,
+    "author": {
+      "id": "1963240674",
+      "name": "Προβοκάτορας",
+      "screen_name": "provokatoras4",
+      "avatar_url": "https://pbs.twimg.com/profile_images/1514713113572130817/qQSiux5M_200x200.jpg"
+    },
+    "likes": 236,
+    "reposts": 6,
+    "quotes": 1,
+    "replies": 1,
+    "hashtags": [
+      "NAI_POIOS_EINAI"
+    ],
+    "matched_queries": [
+      "NAI_POIOS_EINAI"
+    ],
+    "matched_query_variants": [
+      "nai_poios_einai"
+    ],
+    "matched_feeds": [
+      "top"
+    ],
+    "types": [
+      "IMAGE"
+    ],
+    "media": [
+      {
+        "id": "1341704246731960321",
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/Ep6w51wXcAE0gU_.jpg?name=orig",
+        "width": 2058,
+        "height": 1698
+      }
+    ],
+    "collected_at": "2026-09-05T07:39:41+00:00"
+  },
+  {
+    "id": "1341515183785652231",
+    "url": "https://x.com/MikeKou7/status/1341515183785652231",
+    "text": "Να αποκαλύψω ότι είχα γενέθλια ή όχι; Άστο, τώρα το είπα, δεν σας νοιάζει αλλά όλα καλά 😂 😊  #Nai_Poios_Einai",
+    "created_at": "Tue Dec 22 22:45:18 +0000 2020",
+    "created_timestamp": 1608677118,
+    "author": {
+      "id": "407097269",
+      "name": "Υπέρκομψος Μιχάλης",
+      "screen_name": "MikeKou7",
+      "avatar_url": "https://pbs.twimg.com/profile_images/1397696570821382147/xPcDZlRU_200x200.jpg"
+    },
+    "likes": 15,
+    "reposts": 3,
+    "quotes": 0,
+    "replies": 15,
+    "hashtags": [
+      "NAI_POIOS_EINAI"
+    ],
+    "matched_queries": [
+      "NAI_POIOS_EINAI"
+    ],
+    "matched_query_variants": [
+      "nai_poios_einai"
+    ],
+    "matched_feeds": [
+      "top"
+    ],
+    "types": [
+      "TEXT"
+    ],
+    "media": [],
+    "collected_at": "2026-09-05T07:39:41+00:00"
   },
   {
     "id": "1340425964279492615",
