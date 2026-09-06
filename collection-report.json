@@ -1,11 +1,11 @@
 {
   "status": "ok",
-  "started_at": "2026-09-05T07:38:35+00:00",
-  "finished_at": "2026-09-05T07:40:14+00:00",
+  "started_at": "2026-09-06T07:52:22+00:00",
+  "finished_at": "2026-09-06T07:54:17+00:00",
   "search_mode": "hashtag_case_variants",
-  "previous_archive_count": 1731,
+  "previous_archive_count": 1741,
   "current_archive_count": 1741,
-  "new_unique_posts": 10,
+  "new_unique_posts": 0,
   "counts": {
     "ALL": 1741,
     "GIF": 392,
@@ -31,9 +31,9 @@
       "raw_posts_received": 0
     },
     "NAI_POIOS_EINAI": {
-      "queries_with_results": 1,
-      "pages_completed": 1,
-      "raw_posts_received": 20
+      "queries_with_results": 0,
+      "pages_completed": 0,
+      "raw_posts_received": 0
     },
     "ARKADIOS_ARKADYO": {
       "queries_with_results": 0,
@@ -566,9 +566,9 @@
       "hashtag": "NAI_POIOS_EINAI",
       "query": "nai_poios_einai",
       "feed": "top",
-      "pages_completed": 1,
-      "raw_posts_received": 20,
-      "unique_posts_added": 10,
+      "pages_completed": 0,
+      "raw_posts_received": 0,
+      "unique_posts_added": 0,
       "stopped_by_404": true,
       "error": null
     },
