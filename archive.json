@@ -37,7 +37,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-09-14T08:52:24+00:00"
+    "collected_at": "2026-09-18T08:13:00+00:00"
   },
   {
     "id": "2058213955244265631",
@@ -107,7 +107,7 @@
         "height": 1122
       }
     ],
-    "collected_at": "2026-09-14T08:52:24+00:00"
+    "collected_at": "2026-09-18T08:13:00+00:00"
   },
   {
     "id": "1981837162678280592",
@@ -147,7 +147,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-09-14T08:52:24+00:00"
+    "collected_at": "2026-09-18T08:13:00+00:00"
   },
   {
     "id": "1797345066320548079",
@@ -185,7 +185,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-09-14T08:52:24+00:00"
+    "collected_at": "2026-09-18T08:13:00+00:00"
   },
   {
     "id": "1731095394363351271",
@@ -226,7 +226,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-09-14T08:52:24+00:00"
+    "collected_at": "2026-09-18T08:13:00+00:00"
   },
   {
     "id": "1667682831349235713",
@@ -265,7 +265,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-09-14T08:52:24+00:00"
+    "collected_at": "2026-09-18T08:13:00+00:00"
   },
   {
     "id": "1667667600581509121",
@@ -303,7 +303,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-09-14T08:53:34+00:00"
+    "collected_at": "2026-09-18T08:14:00+00:00"
   },
   {
     "id": "1662586303135862787",
@@ -342,7 +342,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-09-14T08:52:24+00:00"
+    "collected_at": "2026-09-18T08:13:00+00:00"
   },
   {
     "id": "1662584605445070849",
@@ -381,7 +381,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-09-14T08:52:24+00:00"
+    "collected_at": "2026-09-18T08:13:00+00:00"
   },
   {
     "id": "1662583858942865408",
@@ -420,7 +420,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-09-14T08:52:24+00:00"
+    "collected_at": "2026-09-18T08:13:00+00:00"
   },
   {
     "id": "1662582224196173825",
@@ -459,7 +459,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-09-14T08:52:24+00:00"
+    "collected_at": "2026-09-18T08:13:00+00:00"
   },
   {
     "id": "1662581957622919168",
@@ -499,7 +499,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-09-14T08:52:24+00:00"
+    "collected_at": "2026-09-18T08:13:00+00:00"
   },
   {
     "id": "1662581466415394818",
@@ -534,9 +534,11 @@
     "matched_query_variants": [
       "#ASK_ARKADY",
       "#NAI_POIOS_EINAI",
+      "#Nai_poios_einai",
       "#RADIO_ARKADY",
       "#Radio_Arkady",
       "#ask_arkady",
+      "#nai_poios_einai",
       "#radio_arkady",
       "ASK_ARKADY",
       "Ask_Arkady",
@@ -551,7 +553,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-09-14T08:53:43+00:00"
+    "collected_at": "2026-09-18T08:15:04+00:00"
   },
   {
     "id": "1662579957598486528",
@@ -585,9 +587,11 @@
     "matched_query_variants": [
       "#ASK_ARKADY",
       "#NAI_POIOS_EINAI",
+      "#Nai_poios_einai",
       "#RADIO_ARKADY",
       "#Radio_Arkady",
       "#ask_arkady",
+      "#nai_poios_einai",
       "#radio_arkady",
       "ASK_ARKADY",
       "Ask_Arkady",
@@ -602,7 +606,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-09-14T08:53:43+00:00"
+    "collected_at": "2026-09-18T08:15:04+00:00"
   },
   {
     "id": "1650061011469193216",
@@ -641,7 +645,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-09-14T08:52:24+00:00"
+    "collected_at": "2026-09-18T08:13:00+00:00"
   },
   {
     "id": "1650010637857173504",
@@ -681,7 +685,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-09-14T08:52:24+00:00"
+    "collected_at": "2026-09-18T08:13:00+00:00"
   },
   {
     "id": "1647628496234061829",
@@ -720,7 +724,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-09-14T08:52:24+00:00"
+    "collected_at": "2026-09-18T08:13:00+00:00"
   },
   {
     "id": "1647558506189398016",
@@ -760,7 +764,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-09-14T08:52:24+00:00"
+    "collected_at": "2026-09-18T08:13:00+00:00"
   },
   {
     "id": "1636800568654954516",
@@ -826,7 +830,7 @@
         ]
       }
     ],
-    "collected_at": "2026-09-14T08:53:34+00:00"
+    "collected_at": "2026-09-18T08:14:00+00:00"
   },
   {
     "id": "1630604622195834889",
@@ -840,7 +844,7 @@
       "screen_name": "RPhoniko",
       "avatar_url": "https://pbs.twimg.com/profile_images/1604581612460675074/w8mnIeyH_200x200.jpg"
     },
-    "likes": 9,
+    "likes": 8,
     "reposts": 0,
     "quotes": 1,
     "replies": 1,
@@ -866,7 +870,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-09-14T08:52:24+00:00"
+    "collected_at": "2026-09-18T08:13:00+00:00"
   },
   {
     "id": "1611815136750100481",
@@ -905,7 +909,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-09-14T08:52:24+00:00"
+    "collected_at": "2026-09-18T08:13:00+00:00"
   },
   {
     "id": "1604588200353271810",
@@ -1145,9 +1149,11 @@
     "matched_query_variants": [
       "#ASK_ARKADY",
       "#NAI_POIOS_EINAI",
+      "#Nai_poios_einai",
       "#RADIO_ARKADY",
       "#Radio_Arkady",
       "#ask_arkady",
+      "#nai_poios_einai",
       "#radio_arkady",
       "ASK_ARKADY",
       "Ask_Arkady",
@@ -1162,7 +1168,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-09-14T08:53:43+00:00"
+    "collected_at": "2026-09-18T08:15:04+00:00"
   },
   {
     "id": "1573030368529485824",
@@ -1213,7 +1219,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-09-14T08:53:34+00:00"
+    "collected_at": "2026-09-18T08:15:04+00:00"
   },
   {
     "id": "1543388529950179331",
@@ -2922,7 +2928,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-09-14T08:53:34+00:00"
+    "collected_at": "2026-09-18T08:14:00+00:00"
   },
   {
     "id": "1542852437232553987",
@@ -2960,7 +2966,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-09-14T08:53:34+00:00"
+    "collected_at": "2026-09-18T08:14:00+00:00"
   },
   {
     "id": "1542850964926988289",
@@ -2998,7 +3004,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-09-14T08:53:34+00:00"
+    "collected_at": "2026-09-18T08:14:00+00:00"
   },
   {
     "id": "1542838326058680320",
@@ -3036,7 +3042,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-09-14T08:53:34+00:00"
+    "collected_at": "2026-09-18T08:14:00+00:00"
   },
   {
     "id": "1542746025886191617",
@@ -3074,7 +3080,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-09-14T08:53:34+00:00"
+    "collected_at": "2026-09-18T08:14:00+00:00"
   },
   {
     "id": "1542743382983843840",
@@ -3112,7 +3118,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-09-14T08:53:34+00:00"
+    "collected_at": "2026-09-18T08:14:00+00:00"
   },
   {
     "id": "1542741536852660224",
@@ -3150,7 +3156,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-09-14T08:53:34+00:00"
+    "collected_at": "2026-09-18T08:14:00+00:00"
   },
   {
     "id": "1542726894965202944",
@@ -3188,7 +3194,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-09-14T08:53:34+00:00"
+    "collected_at": "2026-09-18T08:14:00+00:00"
   },
   {
     "id": "1542723220230520835",
@@ -3226,7 +3232,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-09-14T08:53:34+00:00"
+    "collected_at": "2026-09-18T08:14:00+00:00"
   },
   {
     "id": "1542695417607061504",
@@ -3264,7 +3270,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-09-14T08:53:34+00:00"
+    "collected_at": "2026-09-18T08:14:00+00:00"
   },
   {
     "id": "1542683091365511169",
@@ -3310,7 +3316,7 @@
         "height": 637
       }
     ],
-    "collected_at": "2026-09-14T08:53:34+00:00"
+    "collected_at": "2026-09-18T08:14:00+00:00"
   },
   {
     "id": "1542682636203737088",
@@ -3348,7 +3354,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-09-14T08:53:34+00:00"
+    "collected_at": "2026-09-18T08:14:00+00:00"
   },
   {
     "id": "1542682518805221378",
@@ -3386,7 +3392,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-09-14T08:53:34+00:00"
+    "collected_at": "2026-09-18T08:14:00+00:00"
   },
   {
     "id": "1542679997248376832",
@@ -3424,7 +3430,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-09-14T08:53:34+00:00"
+    "collected_at": "2026-09-18T08:14:00+00:00"
   },
   {
     "id": "1542678744313257985",
@@ -6025,8 +6031,10 @@
     ],
     "matched_query_variants": [
       "#NAI_POIOS_EINAI",
+      "#Nai_poios_einai",
       "#RADIO_ARKADY",
       "#Radio_Arkady",
+      "#nai_poios_einai",
       "#radio_arkady",
       "NAI_POIOS_EINAI",
       "RADIO_ARKADY",
@@ -6038,7 +6046,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-09-14T08:53:43+00:00"
+    "collected_at": "2026-09-18T08:15:04+00:00"
   },
   {
     "id": "1540874277104271361",
@@ -16943,6 +16951,8 @@
     ],
     "matched_query_variants": [
       "#NAI_POIOS_EINAI",
+      "#Nai_poios_einai",
+      "#nai_poios_einai",
       "NAI_POIOS_EINAI",
       "nai_poios_einai"
     ],
@@ -16953,7 +16963,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-09-14T08:53:43+00:00"
+    "collected_at": "2026-09-18T08:15:04+00:00"
   },
   {
     "id": "1540815780954226692",
@@ -17018,6 +17028,8 @@
     ],
     "matched_query_variants": [
       "#NAI_POIOS_EINAI",
+      "#Nai_poios_einai",
+      "#nai_poios_einai",
       "NAI_POIOS_EINAI",
       "nai_poios_einai"
     ],
@@ -17028,7 +17040,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-09-14T08:53:43+00:00"
+    "collected_at": "2026-09-18T08:15:04+00:00"
   },
   {
     "id": "1540814539469512704",
@@ -17245,6 +17257,8 @@
     ],
     "matched_query_variants": [
       "#NAI_POIOS_EINAI",
+      "#Nai_poios_einai",
+      "#nai_poios_einai",
       "NAI_POIOS_EINAI",
       "nai_poios_einai"
     ],
@@ -17290,7 +17304,7 @@
         ]
       }
     ],
-    "collected_at": "2026-09-14T08:53:43+00:00"
+    "collected_at": "2026-09-18T08:15:04+00:00"
   },
   {
     "id": "1537690572193939456",
@@ -17316,6 +17330,8 @@
     ],
     "matched_query_variants": [
       "#NAI_POIOS_EINAI",
+      "#Nai_poios_einai",
+      "#nai_poios_einai",
       "NAI_POIOS_EINAI",
       "nai_poios_einai"
     ],
@@ -17326,7 +17342,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-09-14T08:53:43+00:00"
+    "collected_at": "2026-09-18T08:15:04+00:00"
   },
   {
     "id": "1537601787909353472",
@@ -17352,6 +17368,8 @@
     ],
     "matched_query_variants": [
       "#NAI_POIOS_EINAI",
+      "#Nai_poios_einai",
+      "#nai_poios_einai",
       "NAI_POIOS_EINAI",
       "nai_poios_einai"
     ],
@@ -17362,7 +17380,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-09-14T08:53:43+00:00"
+    "collected_at": "2026-09-18T08:15:04+00:00"
   },
   {
     "id": "1537601516416139267",
@@ -17388,6 +17406,8 @@
     ],
     "matched_query_variants": [
       "#NAI_POIOS_EINAI",
+      "#Nai_poios_einai",
+      "#nai_poios_einai",
       "NAI_POIOS_EINAI",
       "nai_poios_einai"
     ],
@@ -17398,7 +17418,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-09-14T08:53:43+00:00"
+    "collected_at": "2026-09-18T08:15:04+00:00"
   },
   {
     "id": "1537600764905934849",
@@ -17424,6 +17444,8 @@
     ],
     "matched_query_variants": [
       "#NAI_POIOS_EINAI",
+      "#Nai_poios_einai",
+      "#nai_poios_einai",
       "NAI_POIOS_EINAI",
       "nai_poios_einai"
     ],
@@ -17434,7 +17456,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-09-14T08:53:43+00:00"
+    "collected_at": "2026-09-18T08:15:04+00:00"
   },
   {
     "id": "1537598852597010432",
@@ -17460,6 +17482,8 @@
     ],
     "matched_query_variants": [
       "#NAI_POIOS_EINAI",
+      "#Nai_poios_einai",
+      "#nai_poios_einai",
       "NAI_POIOS_EINAI",
       "nai_poios_einai"
     ],
@@ -17470,7 +17494,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-09-14T08:53:43+00:00"
+    "collected_at": "2026-09-18T08:15:04+00:00"
   },
   {
     "id": "1537597832743555072",
@@ -17496,6 +17520,8 @@
     ],
     "matched_query_variants": [
       "#NAI_POIOS_EINAI",
+      "#Nai_poios_einai",
+      "#nai_poios_einai",
       "NAI_POIOS_EINAI",
       "nai_poios_einai"
     ],
@@ -17506,7 +17532,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-09-14T08:53:43+00:00"
+    "collected_at": "2026-09-18T08:15:04+00:00"
   },
   {
     "id": "1537595292916322304",
@@ -17532,6 +17558,8 @@
     ],
     "matched_query_variants": [
       "#NAI_POIOS_EINAI",
+      "#Nai_poios_einai",
+      "#nai_poios_einai",
       "NAI_POIOS_EINAI",
       "nai_poios_einai"
     ],
@@ -17561,7 +17589,7 @@
         ]
       }
     ],
-    "collected_at": "2026-09-14T08:53:43+00:00"
+    "collected_at": "2026-09-18T08:15:04+00:00"
   },
   {
     "id": "1537595178957119488",
@@ -17587,6 +17615,8 @@
     ],
     "matched_query_variants": [
       "#NAI_POIOS_EINAI",
+      "#Nai_poios_einai",
+      "#nai_poios_einai",
       "NAI_POIOS_EINAI",
       "nai_poios_einai"
     ],
@@ -17597,7 +17627,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-09-14T08:53:43+00:00"
+    "collected_at": "2026-09-18T08:15:04+00:00"
   },
   {
     "id": "1537594629972840448",
@@ -17623,6 +17653,8 @@
     ],
     "matched_query_variants": [
       "#NAI_POIOS_EINAI",
+      "#Nai_poios_einai",
+      "#nai_poios_einai",
       "NAI_POIOS_EINAI",
       "nai_poios_einai"
     ],
@@ -17633,7 +17665,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-09-14T08:53:43+00:00"
+    "collected_at": "2026-09-18T08:15:04+00:00"
   },
   {
     "id": "1537593549029523456",
@@ -17668,7 +17700,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-08-19T05:05:26+00:00"
+    "collected_at": "2026-09-18T08:15:04+00:00"
   },
   {
     "id": "1537592956424957952",
@@ -17694,6 +17726,8 @@
     ],
     "matched_query_variants": [
       "#NAI_POIOS_EINAI",
+      "#Nai_poios_einai",
+      "#nai_poios_einai",
       "NAI_POIOS_EINAI",
       "nai_poios_einai"
     ],
@@ -17712,7 +17746,7 @@
         "height": 1375
       }
     ],
-    "collected_at": "2026-09-14T08:53:43+00:00"
+    "collected_at": "2026-09-18T08:15:04+00:00"
   },
   {
     "id": "1537592095321362432",
@@ -17738,6 +17772,8 @@
     ],
     "matched_query_variants": [
       "#NAI_POIOS_EINAI",
+      "#Nai_poios_einai",
+      "#nai_poios_einai",
       "NAI_POIOS_EINAI",
       "nai_poios_einai"
     ],
@@ -17748,7 +17784,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-09-14T08:53:43+00:00"
+    "collected_at": "2026-09-18T08:15:04+00:00"
   },
   {
     "id": "1537591945953878016",
@@ -17773,7 +17809,9 @@
       "NAI_POIOS_EINAI"
     ],
     "matched_query_variants": [
-      "#NAI_POIOS_EINAI"
+      "#NAI_POIOS_EINAI",
+      "#Nai_poios_einai",
+      "#nai_poios_einai"
     ],
     "matched_feeds": [
       "latest"
@@ -17782,7 +17820,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-09-14T08:53:43+00:00"
+    "collected_at": "2026-09-18T08:14:38+00:00"
   },
   {
     "id": "1537591852693524480",
@@ -17807,7 +17845,9 @@
       "NAI_POIOS_EINAI"
     ],
     "matched_query_variants": [
-      "#NAI_POIOS_EINAI"
+      "#NAI_POIOS_EINAI",
+      "#Nai_poios_einai",
+      "#nai_poios_einai"
     ],
     "matched_feeds": [
       "latest"
@@ -17816,7 +17856,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-09-14T08:53:43+00:00"
+    "collected_at": "2026-09-18T08:14:38+00:00"
   },
   {
     "id": "1537591794942283776",
@@ -33322,7 +33362,7 @@
       "screen_name": "lilia_mer",
       "avatar_url": "https://pbs.twimg.com/profile_images/3434583859/020b7fe54b1ba5dadf9f06f0614eb526_200x200.jpeg"
     },
-    "likes": 96,
+    "likes": 95,
     "reposts": 10,
     "quotes": 0,
     "replies": 45,
@@ -33357,7 +33397,7 @@
         "height": 2048
       }
     ],
-    "collected_at": "2026-09-14T08:52:37+00:00"
+    "collected_at": "2026-09-18T08:13:16+00:00"
   },
   {
     "id": "1535748239366004738",
@@ -51769,7 +51809,7 @@
         "height": 1070
       }
     ],
-    "collected_at": "2026-09-14T08:53:09+00:00"
+    "collected_at": "2026-09-18T08:13:45+00:00"
   },
   {
     "id": "1519785926054006785",
@@ -51836,6 +51876,7 @@
       "ASK_ARKADY"
     ],
     "matched_query_variants": [
+      "#Ask_Arkady",
       "#ask_arkady"
     ],
     "matched_feeds": [
@@ -51853,7 +51894,7 @@
         "height": 1080
       }
     ],
-    "collected_at": "2026-09-14T08:53:02+00:00"
+    "collected_at": "2026-09-18T08:13:45+00:00"
   },
   {
     "id": "1519091709942157313",
@@ -52316,7 +52357,7 @@
       "screen_name": "_Windfur",
       "avatar_url": "https://pbs.twimg.com/profile_images/1520782662364979201/C7onr5gv_200x200.jpg"
     },
-    "likes": 34,
+    "likes": 33,
     "reposts": 12,
     "quotes": 0,
     "replies": 2,
@@ -52330,7 +52371,8 @@
       "#Nai_Poios_Einai"
     ],
     "matched_feeds": [
-      "media"
+      "media",
+      "top"
     ],
     "types": [
       "VIDEO"
@@ -52371,7 +52413,7 @@
         ]
       }
     ],
-    "collected_at": "2026-08-07T08:01:26+00:00"
+    "collected_at": "2026-09-18T08:14:50+00:00"
   },
   {
     "id": "1514724689909850118",
@@ -52660,7 +52702,8 @@
       "#Nai_Poios_Einai"
     ],
     "matched_feeds": [
-      "media"
+      "media",
+      "top"
     ],
     "types": [
       "IMAGE"
@@ -52674,7 +52717,7 @@
         "height": 497
       }
     ],
-    "collected_at": "2026-08-07T08:01:26+00:00"
+    "collected_at": "2026-09-18T08:14:50+00:00"
   },
   {
     "id": "1514711797022003205",
@@ -53150,6 +53193,7 @@
       "NAI_POIOS_EINAI"
     ],
     "matched_query_variants": [
+      "#Nai_Poios_Einai",
       "nai_poios_einai"
     ],
     "matched_feeds": [
@@ -53167,7 +53211,7 @@
         "height": 1075
       }
     ],
-    "collected_at": "2026-09-05T07:39:41+00:00"
+    "collected_at": "2026-09-18T08:14:50+00:00"
   },
   {
     "id": "1501350615540133890",
@@ -53193,6 +53237,7 @@
     ],
     "matched_query_variants": [
       "#ASK_ARKADY",
+      "#Ask_Arkady",
       "#ask_arkady"
     ],
     "matched_feeds": [
@@ -53210,7 +53255,7 @@
         "height": 439
       }
     ],
-    "collected_at": "2026-09-14T08:53:01+00:00"
+    "collected_at": "2026-09-18T08:13:45+00:00"
   },
   {
     "id": "1499515052193427465",
@@ -53400,6 +53445,7 @@
     ],
     "matched_query_variants": [
       "#ASK_ARKADY",
+      "#Ask_Arkady",
       "#ask_arkady"
     ],
     "matched_feeds": [
@@ -53417,7 +53463,7 @@
         "height": 3000
       }
     ],
-    "collected_at": "2026-09-14T08:53:03+00:00"
+    "collected_at": "2026-09-18T08:13:45+00:00"
   },
   {
     "id": "1493709718807883785",
@@ -53443,6 +53489,7 @@
     ],
     "matched_query_variants": [
       "#ASK_ARKADY",
+      "#Ask_Arkady",
       "#ask_arkady"
     ],
     "matched_feeds": [
@@ -53461,7 +53508,7 @@
         "height": 600
       }
     ],
-    "collected_at": "2026-09-14T08:53:02+00:00"
+    "collected_at": "2026-09-18T08:13:45+00:00"
   },
   {
     "id": "1492666056820858880",
@@ -53529,6 +53576,7 @@
     ],
     "matched_query_variants": [
       "#ASK_ARKADY",
+      "#Ask_Arkady",
       "#ask_arkady"
     ],
     "matched_feeds": [
@@ -53546,7 +53594,7 @@
         "height": 3000
       }
     ],
-    "collected_at": "2026-09-14T08:53:01+00:00"
+    "collected_at": "2026-09-18T08:13:45+00:00"
   },
   {
     "id": "1491192119499030530",
@@ -53816,7 +53864,8 @@
       "NAI_POIOS_EINAI"
     ],
     "matched_query_variants": [
-      "#NAI_POIOS_EINAI"
+      "#NAI_POIOS_EINAI",
+      "#Nai_Poios_Einai"
     ],
     "matched_feeds": [
       "top"
@@ -53825,7 +53874,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-08-07T08:01:10+00:00"
+    "collected_at": "2026-09-18T08:14:50+00:00"
   },
   {
     "id": "1486879844315115528",
@@ -54443,7 +54492,7 @@
         "height": 1560
       }
     ],
-    "collected_at": "2026-09-14T08:53:30+00:00"
+    "collected_at": "2026-09-18T08:13:45+00:00"
   },
   {
     "id": "1479635319955800067",
@@ -54847,7 +54896,7 @@
         "height": 592
       }
     ],
-    "collected_at": "2026-09-14T08:53:30+00:00"
+    "collected_at": "2026-09-18T08:13:45+00:00"
   },
   {
     "id": "1478493362349088772",
@@ -55562,6 +55611,7 @@
     ],
     "matched_query_variants": [
       "#ASK_ARKADY",
+      "#Ask_Arkady",
       "#ask_arkady"
     ],
     "matched_feeds": [
@@ -55580,7 +55630,7 @@
         "height": 928
       }
     ],
-    "collected_at": "2026-09-14T08:53:01+00:00"
+    "collected_at": "2026-09-18T08:13:45+00:00"
   },
   {
     "id": "1474140504971685888",
@@ -56139,6 +56189,7 @@
     ],
     "matched_query_variants": [
       "#ASK_ARKADY",
+      "#Ask_Arkady",
       "#ask_arkady",
       "ask_arkady"
     ],
@@ -56157,7 +56208,7 @@
         "height": 1532
       }
     ],
-    "collected_at": "2026-09-14T08:53:30+00:00"
+    "collected_at": "2026-09-18T08:13:45+00:00"
   },
   {
     "id": "1459668928804925442",
@@ -56687,7 +56738,7 @@
         "height": 490
       }
     ],
-    "collected_at": "2026-09-14T08:53:09+00:00"
+    "collected_at": "2026-09-18T08:13:45+00:00"
   },
   {
     "id": "1453110460589518858",
@@ -56852,7 +56903,7 @@
         "height": 683
       }
     ],
-    "collected_at": "2026-09-14T08:53:09+00:00"
+    "collected_at": "2026-09-18T08:13:45+00:00"
   },
   {
     "id": "1450574128617037829",
@@ -56912,6 +56963,7 @@
     ],
     "matched_query_variants": [
       "#ASK_ARKADY",
+      "#Ask_Arkady",
       "#ask_arkady",
       "Ask_Arkady"
     ],
@@ -56930,7 +56982,7 @@
         "height": 691
       }
     ],
-    "collected_at": "2026-09-14T08:53:02+00:00"
+    "collected_at": "2026-09-18T08:13:45+00:00"
   },
   {
     "id": "1446267949397028868",
@@ -57071,6 +57123,7 @@
       "ASK_ARKADY"
     ],
     "matched_query_variants": [
+      "#Ask_Arkady",
       "#ask_arkady"
     ],
     "matched_feeds": [
@@ -57088,7 +57141,7 @@
         "height": 2048
       }
     ],
-    "collected_at": "2026-09-14T08:53:02+00:00"
+    "collected_at": "2026-09-18T08:13:45+00:00"
   },
   {
     "id": "1440426286212546568",
@@ -57113,6 +57166,7 @@
       "ASK_ARKADY"
     ],
     "matched_query_variants": [
+      "#Ask_Arkady",
       "#ask_arkady",
       "Ask_Arkady"
     ],
@@ -57131,7 +57185,7 @@
         "height": 383
       }
     ],
-    "collected_at": "2026-09-14T08:53:02+00:00"
+    "collected_at": "2026-09-18T08:13:45+00:00"
   },
   {
     "id": "1440424897004531726",
@@ -57644,7 +57698,7 @@
         "height": 3000
       }
     ],
-    "collected_at": "2026-09-14T08:53:09+00:00"
+    "collected_at": "2026-09-18T08:13:45+00:00"
   },
   {
     "id": "1432870722217693184",
@@ -57767,7 +57821,7 @@
         "height": 1080
       }
     ],
-    "collected_at": "2026-09-14T08:53:30+00:00"
+    "collected_at": "2026-09-18T08:13:45+00:00"
   },
   {
     "id": "1431001804205133828",
@@ -57868,7 +57922,7 @@
         "height": 662
       }
     ],
-    "collected_at": "2026-09-14T08:52:37+00:00"
+    "collected_at": "2026-09-18T08:13:16+00:00"
   },
   {
     "id": "1429215114599751681",
@@ -57916,7 +57970,7 @@
         "height": 1248
       }
     ],
-    "collected_at": "2026-09-14T08:52:37+00:00"
+    "collected_at": "2026-09-18T08:13:16+00:00"
   },
   {
     "id": "1428538568260083714",
@@ -58038,7 +58092,7 @@
         "height": 675
       }
     ],
-    "collected_at": "2026-09-14T08:53:30+00:00"
+    "collected_at": "2026-09-18T08:13:45+00:00"
   },
   {
     "id": "1425941902529024004",
@@ -58125,7 +58179,49 @@
         "height": 748
       }
     ],
-    "collected_at": "2026-09-14T08:53:09+00:00"
+    "collected_at": "2026-09-18T08:13:45+00:00"
+  },
+  {
+    "id": "1420864466946822151",
+    "url": "https://x.com/nisafi2008/status/1420864466946822151",
+    "text": "#nai_poios_einai #καυσωνας #ergnews \nΔευτέρα και Τρίτη  2-3/8 προβλέπονται θερμοκρασίες 44-45°C.. \nΑφού το κράτος δεν κηρύττει Αργία, ας κηρύξουμε εμείς Απεργία!!\nΚανένας - Καμία στη δουλειά με καύσωνα!!\nΑλλιώς θα θρηνήσουμε θύματα..!!",
+    "created_at": "Thu Jul 29 21:51:01 +0000 2021",
+    "created_timestamp": 1627595461,
+    "author": {
+      "id": "1236756476015915011",
+      "name": "Christos Trianta",
+      "screen_name": "nisafi2008",
+      "avatar_url": "https://pbs.twimg.com/profile_images/2036095870345572353/dhMi5jIn_200x200.jpg"
+    },
+    "likes": 50,
+    "reposts": 21,
+    "quotes": 0,
+    "replies": 2,
+    "hashtags": [
+      "NAI_POIOS_EINAI"
+    ],
+    "matched_queries": [
+      "NAI_POIOS_EINAI"
+    ],
+    "matched_query_variants": [
+      "#Nai_Poios_Einai"
+    ],
+    "matched_feeds": [
+      "top"
+    ],
+    "types": [
+      "IMAGE"
+    ],
+    "media": [
+      {
+        "id": "1420864462647697415",
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/E7fss2IXoAcVDic.jpg?name=orig",
+        "width": 460,
+        "height": 340
+      }
+    ],
+    "collected_at": "2026-09-18T08:14:50+00:00"
   },
   {
     "id": "1420160393197105157",
@@ -58186,6 +58282,7 @@
       "ASK_ARKADY"
     ],
     "matched_query_variants": [
+      "#Ask_Arkady",
       "#ask_arkady",
       "ASK_ARKADY"
     ],
@@ -58205,7 +58302,7 @@
         "height": 2048
       }
     ],
-    "collected_at": "2026-09-14T08:53:02+00:00"
+    "collected_at": "2026-09-18T08:13:45+00:00"
   },
   {
     "id": "1419085662465232897",
@@ -58578,6 +58675,7 @@
       "ASK_ARKADY"
     ],
     "matched_query_variants": [
+      "#Ask_Arkady",
       "#ask_arkady"
     ],
     "matched_feeds": [
@@ -58595,7 +58693,7 @@
         "height": 973
       }
     ],
-    "collected_at": "2026-09-14T08:53:02+00:00"
+    "collected_at": "2026-09-18T08:13:45+00:00"
   },
   {
     "id": "1417595782228844550",
@@ -58620,6 +58718,7 @@
       "ASK_ARKADY"
     ],
     "matched_query_variants": [
+      "#Ask_Arkady",
       "#ask_arkady",
       "Ask_Arkady"
     ],
@@ -58665,7 +58764,7 @@
         ]
       }
     ],
-    "collected_at": "2026-09-14T08:53:03+00:00"
+    "collected_at": "2026-09-18T08:13:45+00:00"
   },
   {
     "id": "1415572606363873280",
@@ -58695,6 +58794,8 @@
     ],
     "matched_query_variants": [
       "#ASK_ARKADY",
+      "#Ask_Arkady",
+      "#Nai_Poios_Einai",
       "#RADIO_ARKADY",
       "#Radio_Arkady",
       "#ask_arkady",
@@ -58729,7 +58830,7 @@
         "height": 1242
       }
     ],
-    "collected_at": "2026-09-14T08:53:38+00:00"
+    "collected_at": "2026-09-18T08:14:50+00:00"
   },
   {
     "id": "1411473103847362567",
@@ -59053,6 +59154,7 @@
       "ASK_ARKADY"
     ],
     "matched_query_variants": [
+      "#Ask_Arkady",
       "#ask_arkady",
       "Ask_Arkady",
       "ask_arkady"
@@ -59080,7 +59182,7 @@
         "height": 1169
       }
     ],
-    "collected_at": "2026-09-14T08:53:26+00:00"
+    "collected_at": "2026-09-18T08:13:45+00:00"
   },
   {
     "id": "1407467410937032704",
@@ -59206,7 +59308,7 @@
         "height": 1220
       }
     ],
-    "collected_at": "2026-09-14T08:53:30+00:00"
+    "collected_at": "2026-09-18T08:13:45+00:00"
   },
   {
     "id": "1407454354592968704",
@@ -59359,8 +59461,8 @@
       "screen_name": "nisafi2008",
       "avatar_url": "https://pbs.twimg.com/profile_images/2036095870345572353/dhMi5jIn_200x200.jpg"
     },
-    "likes": 652,
-    "reposts": 122,
+    "likes": 647,
+    "reposts": 121,
     "quotes": 1,
     "replies": 6,
     "hashtags": [
@@ -59370,6 +59472,7 @@
       "NAI_POIOS_EINAI"
     ],
     "matched_query_variants": [
+      "#Nai_Poios_Einai",
       "#nai_poios_einai"
     ],
     "matched_feeds": [
@@ -59387,7 +59490,7 @@
         "height": 274
       }
     ],
-    "collected_at": "2026-07-28T11:33:07+00:00"
+    "collected_at": "2026-09-18T08:14:50+00:00"
   },
   {
     "id": "1405637453638213635",
@@ -59446,6 +59549,7 @@
       "ASK_ARKADY"
     ],
     "matched_query_variants": [
+      "#Ask_Arkady",
       "#ask_arkady"
     ],
     "matched_feeds": [
@@ -59463,7 +59567,7 @@
         "height": 1280
       }
     ],
-    "collected_at": "2026-09-14T08:53:02+00:00"
+    "collected_at": "2026-09-18T08:13:45+00:00"
   },
   {
     "id": "1404916556715470858",
@@ -59488,6 +59592,7 @@
       "ASK_ARKADY"
     ],
     "matched_query_variants": [
+      "#Ask_Arkady",
       "#ask_arkady",
       "Ask_Arkady",
       "ask_arkady"
@@ -59522,7 +59627,7 @@
         "height": 699
       }
     ],
-    "collected_at": "2026-09-14T08:53:26+00:00"
+    "collected_at": "2026-09-18T08:13:45+00:00"
   },
   {
     "id": "1404913493648752645",
@@ -59566,7 +59671,7 @@
         "height": 619
       }
     ],
-    "collected_at": "2026-09-14T08:53:09+00:00"
+    "collected_at": "2026-09-18T08:13:45+00:00"
   },
   {
     "id": "1404912424642396167",
@@ -60947,7 +61052,7 @@
         "height": 395
       }
     ],
-    "collected_at": "2026-09-14T08:53:30+00:00"
+    "collected_at": "2026-09-18T08:13:45+00:00"
   },
   {
     "id": "1398072986608058372",
@@ -62266,6 +62371,7 @@
       "ASK_ARKADY"
     ],
     "matched_query_variants": [
+      "#Ask_Arkady",
       "#ask_arkady",
       "Ask_Arkady"
     ],
@@ -62284,7 +62390,7 @@
         "height": 3000
       }
     ],
-    "collected_at": "2026-09-14T08:53:02+00:00"
+    "collected_at": "2026-09-18T08:13:45+00:00"
   },
   {
     "id": "1397348766190034946",
@@ -62329,7 +62435,7 @@
         "height": 498
       }
     ],
-    "collected_at": "2026-09-14T08:53:30+00:00"
+    "collected_at": "2026-09-18T08:13:45+00:00"
   },
   {
     "id": "1397335659547873283",
@@ -62434,6 +62540,7 @@
       "ASK_ARKADY"
     ],
     "matched_query_variants": [
+      "#Ask_Arkady",
       "#ask_arkady"
     ],
     "matched_feeds": [
@@ -62451,7 +62558,7 @@
         "height": 2048
       }
     ],
-    "collected_at": "2026-09-14T08:53:02+00:00"
+    "collected_at": "2026-09-18T08:13:45+00:00"
   },
   {
     "id": "1396251393732878338",
@@ -62626,6 +62733,48 @@
     "collected_at": "2026-08-07T08:01:10+00:00"
   },
   {
+    "id": "1395499308221353987",
+    "url": "https://x.com/nisafi2008/status/1395499308221353987",
+    "text": "#nai_poios_einai #Σχινος #Σχίνο #Φωτιά #Λουτράκι #Αλεποχώρι #Γεράνεια #Μέγαρα #Αττική\n#Σχινο_Κορινθιας #antireport \nΔεν Θα Αφήσουμε Τα Βουνά Απροστάτευτα!!!\nhttps://athens.indymedia.org/post/1590244/",
+    "created_at": "Thu May 20 21:58:56 +0000 2021",
+    "created_timestamp": 1621547936,
+    "author": {
+      "id": "1236756476015915011",
+      "name": "Christos Trianta",
+      "screen_name": "nisafi2008",
+      "avatar_url": "https://pbs.twimg.com/profile_images/2036095870345572353/dhMi5jIn_200x200.jpg"
+    },
+    "likes": 61,
+    "reposts": 24,
+    "quotes": 2,
+    "replies": 1,
+    "hashtags": [
+      "NAI_POIOS_EINAI"
+    ],
+    "matched_queries": [
+      "NAI_POIOS_EINAI"
+    ],
+    "matched_query_variants": [
+      "#Nai_Poios_Einai"
+    ],
+    "matched_feeds": [
+      "top"
+    ],
+    "types": [
+      "IMAGE"
+    ],
+    "media": [
+      {
+        "id": "1395499305524502528",
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/E13POYYXoAAsb6q.jpg?name=orig",
+        "width": 964,
+        "height": 1368
+      }
+    ],
+    "collected_at": "2026-09-18T08:14:50+00:00"
+  },
+  {
     "id": "1394822951032299520",
     "url": "https://x.com/Pantelwolf/status/1394822951032299520",
     "text": "Εμένα ένα είναι το αγαπημένο μου χρώμα\n #ask_arkady",
@@ -62668,7 +62817,7 @@
         "height": 320
       }
     ],
-    "collected_at": "2026-09-14T08:53:30+00:00"
+    "collected_at": "2026-09-18T08:13:45+00:00"
   },
   {
     "id": "1393676884886556678",
@@ -62831,7 +62980,7 @@
         "height": 363
       }
     ],
-    "collected_at": "2026-09-14T08:53:30+00:00"
+    "collected_at": "2026-09-18T08:13:45+00:00"
   },
   {
     "id": "1392245898600722435",
@@ -63065,6 +63214,7 @@
       "NAI_POIOS_EINAI"
     ],
     "matched_query_variants": [
+      "#Nai_Poios_Einai",
       "nai_poios_einai"
     ],
     "matched_feeds": [
@@ -63074,7 +63224,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-09-05T07:39:41+00:00"
+    "collected_at": "2026-09-18T08:14:50+00:00"
   },
   {
     "id": "1390476594733621253",
@@ -63769,7 +63919,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-09-08T08:07:19+00:00"
+    "collected_at": "2026-09-18T08:13:16+00:00"
   },
   {
     "id": "1388613331284631554",
@@ -63988,6 +64138,48 @@
     "collected_at": "2026-08-07T08:01:26+00:00"
   },
   {
+    "id": "1387897807344898058",
+    "url": "https://x.com/ManAndroulakis/status/1387897807344898058",
+    "text": "Όσους δεν σας έχει πλοκαρει ... μπείτε\nνα του ρίξετε καμμιά Χριστοπαναγία . \n#Nai_Poios_Einai",
+    "created_at": "Thu Apr 29 22:33:17 +0000 2021",
+    "created_timestamp": 1619735597,
+    "author": {
+      "id": "3380786135",
+      "name": "Μανόλης della Creta",
+      "screen_name": "ManAndroulakis",
+      "avatar_url": "https://pbs.twimg.com/profile_images/1938846746370514944/YyCTZ-gS_200x200.jpg"
+    },
+    "likes": 55,
+    "reposts": 11,
+    "quotes": 0,
+    "replies": 11,
+    "hashtags": [
+      "NAI_POIOS_EINAI"
+    ],
+    "matched_queries": [
+      "NAI_POIOS_EINAI"
+    ],
+    "matched_query_variants": [
+      "#Nai_Poios_Einai"
+    ],
+    "matched_feeds": [
+      "top"
+    ],
+    "types": [
+      "IMAGE"
+    ],
+    "media": [
+      {
+        "id": "1387897798910259208",
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/E0LNsdiXsAgI25q.jpg?name=orig",
+        "width": 1058,
+        "height": 722
+      }
+    ],
+    "collected_at": "2026-09-18T08:14:50+00:00"
+  },
+  {
     "id": "1387874392802267139",
     "url": "https://x.com/nisafi2008/status/1387874392802267139",
     "text": "#nai_poios_einai #εστιαση #Γεραπετριτης \nΚαλησπέρες στην τρελοπαρέα..",
@@ -64013,7 +64205,8 @@
       "#Nai_Poios_Einai"
     ],
     "matched_feeds": [
-      "media"
+      "media",
+      "top"
     ],
     "types": [
       "IMAGE"
@@ -64027,7 +64220,7 @@
         "height": 721
       }
     ],
-    "collected_at": "2026-08-07T08:01:26+00:00"
+    "collected_at": "2026-09-18T08:14:50+00:00"
   },
   {
     "id": "1387161106368679941",
@@ -64053,6 +64246,7 @@
     ],
     "matched_query_variants": [
       "#ASK_ARKADY",
+      "#Ask_Arkady",
       "#ask_arkady",
       "Ask_Arkady"
     ],
@@ -64071,7 +64265,7 @@
         "height": 780
       }
     ],
-    "collected_at": "2026-09-14T08:53:01+00:00"
+    "collected_at": "2026-09-18T08:13:45+00:00"
   },
   {
     "id": "1387157397555355654",
@@ -64351,7 +64545,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-09-14T08:52:27+00:00"
+    "collected_at": "2026-09-18T08:13:16+00:00"
   },
   {
     "id": "1383565804109631488",
@@ -65135,7 +65329,7 @@
         "height": 1536
       }
     ],
-    "collected_at": "2026-09-14T08:53:30+00:00"
+    "collected_at": "2026-09-18T08:13:45+00:00"
   },
   {
     "id": "1378501982286196737",
@@ -65572,7 +65766,7 @@
         ]
       }
     ],
-    "collected_at": "2026-09-14T08:52:39+00:00"
+    "collected_at": "2026-09-18T08:13:16+00:00"
   },
   {
     "id": "1375354366174052354",
@@ -65848,6 +66042,7 @@
       "NAI_POIOS_EINAI"
     ],
     "matched_query_variants": [
+      "#Nai_Poios_Einai",
       "nai_poios_einai"
     ],
     "matched_feeds": [
@@ -65857,7 +66052,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-09-05T07:39:41+00:00"
+    "collected_at": "2026-09-18T08:14:50+00:00"
   },
   {
     "id": "1375222523340713989",
@@ -65871,7 +66066,7 @@
       "screen_name": "nisafi2008",
       "avatar_url": "https://pbs.twimg.com/profile_images/2036095870345572353/dhMi5jIn_200x200.jpg"
     },
-    "likes": 208,
+    "likes": 207,
     "reposts": 95,
     "quotes": 3,
     "replies": 2,
@@ -65882,6 +66077,7 @@
       "NAI_POIOS_EINAI"
     ],
     "matched_query_variants": [
+      "#Nai_Poios_Einai",
       "#nai_poios_einai"
     ],
     "matched_feeds": [
@@ -65891,7 +66087,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-07-28T11:33:07+00:00"
+    "collected_at": "2026-09-18T08:14:50+00:00"
   },
   {
     "id": "1375222048872660996",
@@ -66273,6 +66469,40 @@
     "collected_at": "2026-09-08T08:07:22+00:00"
   },
   {
+    "id": "1372809380660396032",
+    "url": "https://x.com/Kountelios/status/1372809380660396032",
+    "text": "Σε Αντ1, Star , skai βλέπω ριάλιτι και στο #kontranews βλέπω την πραγματικότητα!\n\n#βημαgazino #Nai_poios_einai #kontra24 #Ant1news #STARChannel #SkaitvGR #πανδημια #μητσοτακη_παραιτησου #Λιγναδης #παιδωναγιασοφια19 #Αδωνις_Γεωργιαδης #Μητσοτακη_καθαρμα #kontrachannel",
+    "created_at": "Fri Mar 19 07:17:16 +0000 2021",
+    "created_timestamp": 1616138236,
+    "author": {
+      "id": "1285952673745960961",
+      "name": "Κουντέλιος",
+      "screen_name": "Kountelios",
+      "avatar_url": "https://pbs.twimg.com/profile_images/1333008402965000192/Hu_RvuHM_200x200.jpg"
+    },
+    "likes": 177,
+    "reposts": 35,
+    "quotes": 1,
+    "replies": 4,
+    "hashtags": [
+      "NAI_POIOS_EINAI"
+    ],
+    "matched_queries": [
+      "NAI_POIOS_EINAI"
+    ],
+    "matched_query_variants": [
+      "#Nai_Poios_Einai"
+    ],
+    "matched_feeds": [
+      "top"
+    ],
+    "types": [
+      "TEXT"
+    ],
+    "media": [],
+    "collected_at": "2026-09-18T08:14:50+00:00"
+  },
+  {
     "id": "1372730281761906691",
     "url": "https://x.com/OlgaKoum/status/1372730281761906691",
     "text": "Με τόση διάσπαση της ελληνικής αριστεράς, απορώ τι ήθελαν το CERN, σε λίγα χρόνια θα βρίσκαμε εμείς το σωματίδιο του Θεού #Nai_poios_einai",
@@ -66318,7 +66548,7 @@
       "screen_name": "Smaragdakr",
       "avatar_url": "https://pbs.twimg.com/profile_images/1256220502613471232/Cz3ksDSV_200x200.jpg"
     },
-    "likes": 114,
+    "likes": 113,
     "reposts": 13,
     "quotes": 9,
     "replies": 40,
@@ -66329,6 +66559,7 @@
       "NAI_POIOS_EINAI"
     ],
     "matched_query_variants": [
+      "#Nai_Poios_Einai",
       "#nai_poios_einai"
     ],
     "matched_feeds": [
@@ -66338,7 +66569,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-07-28T11:33:07+00:00"
+    "collected_at": "2026-09-18T08:14:50+00:00"
   },
   {
     "id": "1372721916562276359",
@@ -66580,6 +66811,7 @@
       "NAI_POIOS_EINAI"
     ],
     "matched_query_variants": [
+      "#Nai_Poios_Einai",
       "#nai_poios_einai"
     ],
     "matched_feeds": [
@@ -66589,7 +66821,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-08-09T05:59:45+00:00"
+    "collected_at": "2026-09-18T08:14:50+00:00"
   },
   {
     "id": "1372697473232351234",
@@ -66673,8 +66905,8 @@
       "screen_name": "ousourpadora",
       "avatar_url": "https://pbs.twimg.com/profile_images/1639690306881835008/4pMua90c_200x200.jpg"
     },
-    "likes": 780,
-    "reposts": 208,
+    "likes": 776,
+    "reposts": 205,
     "quotes": 0,
     "replies": 14,
     "hashtags": [
@@ -66685,6 +66917,7 @@
     ],
     "matched_query_variants": [
       "#NAI_POIOS_EINAI",
+      "#Nai_Poios_Einai",
       "#nai_poios_einai"
     ],
     "matched_feeds": [
@@ -66694,7 +66927,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-08-09T05:59:45+00:00"
+    "collected_at": "2026-09-18T08:14:50+00:00"
   },
   {
     "id": "1372688244333232136",
@@ -67029,6 +67262,7 @@
       "ASK_ARKADY"
     ],
     "matched_query_variants": [
+      "#Ask_Arkady",
       "#ask_arkady"
     ],
     "matched_feeds": [
@@ -67046,7 +67280,7 @@
         "height": 1370
       }
     ],
-    "collected_at": "2026-09-14T08:53:02+00:00"
+    "collected_at": "2026-09-18T08:13:45+00:00"
   },
   {
     "id": "1370885716046192640",
@@ -67249,7 +67483,7 @@
         "height": 2048
       }
     ],
-    "collected_at": "2026-09-14T08:52:39+00:00"
+    "collected_at": "2026-09-18T08:13:16+00:00"
   },
   {
     "id": "1370860355593863176",
@@ -67461,8 +67695,8 @@
       "screen_name": "nisafi2008",
       "avatar_url": "https://pbs.twimg.com/profile_images/2036095870345572353/dhMi5jIn_200x200.jpg"
     },
-    "likes": 214,
-    "reposts": 64,
+    "likes": 212,
+    "reposts": 63,
     "quotes": 5,
     "replies": 3,
     "hashtags": [
@@ -67472,6 +67706,7 @@
       "NAI_POIOS_EINAI"
     ],
     "matched_query_variants": [
+      "#Nai_Poios_Einai",
       "#nai_poios_einai"
     ],
     "matched_feeds": [
@@ -67489,7 +67724,7 @@
         "height": 279
       }
     ],
-    "collected_at": "2026-07-28T11:33:07+00:00"
+    "collected_at": "2026-09-18T08:14:50+00:00"
   },
   {
     "id": "1369449631013339144",
@@ -67570,7 +67805,7 @@
         "height": 1432
       }
     ],
-    "collected_at": "2026-09-14T08:53:30+00:00"
+    "collected_at": "2026-09-18T08:13:45+00:00"
   },
   {
     "id": "1369433724266373122",
@@ -68105,7 +68340,7 @@
         "height": 777
       }
     ],
-    "collected_at": "2026-09-14T08:52:37+00:00"
+    "collected_at": "2026-09-18T08:13:16+00:00"
   },
   {
     "id": "1365085056306458629",
@@ -68131,6 +68366,7 @@
     ],
     "matched_query_variants": [
       "#NAI_POIOS_EINAI",
+      "#Nai_Poios_Einai",
       "#nai_poios_einai"
     ],
     "matched_feeds": [
@@ -68140,7 +68376,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-08-09T05:59:45+00:00"
+    "collected_at": "2026-09-18T08:14:50+00:00"
   },
   {
     "id": "1365075538465931266",
@@ -68200,6 +68436,7 @@
       "ASK_ARKADY"
     ],
     "matched_query_variants": [
+      "#Ask_Arkady",
       "#ask_arkady",
       "Ask_Arkady"
     ],
@@ -68225,7 +68462,7 @@
         "height": 600
       }
     ],
-    "collected_at": "2026-09-14T08:53:02+00:00"
+    "collected_at": "2026-09-18T08:13:45+00:00"
   },
   {
     "id": "1364351756096913409",
@@ -68354,6 +68591,7 @@
       "ASK_ARKADY"
     ],
     "matched_query_variants": [
+      "#Ask_Arkady",
       "#ask_arkady",
       "ASK_ARKADY"
     ],
@@ -68373,7 +68611,7 @@
         "height": 900
       }
     ],
-    "collected_at": "2026-09-14T08:53:02+00:00"
+    "collected_at": "2026-09-18T08:13:45+00:00"
   },
   {
     "id": "1363282608969424899",
@@ -68464,6 +68702,40 @@
       }
     ],
     "collected_at": "2026-09-14T08:52:37+00:00"
+  },
+  {
+    "id": "1361835235625828354",
+    "url": "https://x.com/LVikatou/status/1361835235625828354",
+    "text": "#ΠαιδωνΑγιαΣοφια17 Η τραγωδία αυτής της χώρας είναι ότι χρειάζεται να δίνονται μάχες για τα αυτονόητα. Και έτσι ποτέ δεν προχωράμε ούτε ένα βήμα μπροστά. #nai_poios_einai",
+    "created_at": "Wed Feb 17 00:29:56 +0000 2021",
+    "created_timestamp": 1613521796,
+    "author": {
+      "id": "2719711853",
+      "name": "Lygeri Vikatou",
+      "screen_name": "LVikatou",
+      "avatar_url": "https://pbs.twimg.com/profile_images/1979935457317138433/8fMkHqhV_200x200.jpg"
+    },
+    "likes": 85,
+    "reposts": 62,
+    "quotes": 9,
+    "replies": 1,
+    "hashtags": [
+      "NAI_POIOS_EINAI"
+    ],
+    "matched_queries": [
+      "NAI_POIOS_EINAI"
+    ],
+    "matched_query_variants": [
+      "#Nai_Poios_Einai"
+    ],
+    "matched_feeds": [
+      "top"
+    ],
+    "types": [
+      "TEXT"
+    ],
+    "media": [],
+    "collected_at": "2026-09-18T08:14:50+00:00"
   },
   {
     "id": "1360746650449420289",
@@ -70766,7 +71038,7 @@
         "height": 675
       }
     ],
-    "collected_at": "2026-09-14T08:52:37+00:00"
+    "collected_at": "2026-09-18T08:13:16+00:00"
   },
   {
     "id": "1335351613993660416",
@@ -70814,7 +71086,7 @@
         "height": 666
       }
     ],
-    "collected_at": "2026-09-14T08:52:37+00:00"
+    "collected_at": "2026-09-18T08:13:16+00:00"
   },
   {
     "id": "1334709931367403522",
@@ -72905,7 +73177,7 @@
         "height": 1000
       }
     ],
-    "collected_at": "2026-09-14T08:52:37+00:00"
+    "collected_at": "2026-09-18T08:13:16+00:00"
   },
   {
     "id": "1319779810911129600",
@@ -73017,6 +73289,7 @@
     ],
     "matched_query_variants": [
       "#ASK_ARKADY",
+      "#Ask_Arkady",
       "#ask_arkady",
       "ask_arkady"
     ],
@@ -73035,7 +73308,7 @@
         "height": 375
       }
     ],
-    "collected_at": "2026-09-14T08:53:30+00:00"
+    "collected_at": "2026-09-18T08:13:45+00:00"
   },
   {
     "id": "1318676148759515145",
@@ -73453,6 +73726,7 @@
     ],
     "matched_query_variants": [
       "#ASK_ARKADY",
+      "#Ask_Arkady",
       "#ask_arkady"
     ],
     "matched_feeds": [
@@ -73470,7 +73744,7 @@
         "height": 574
       }
     ],
-    "collected_at": "2026-09-14T08:53:02+00:00"
+    "collected_at": "2026-09-18T08:13:45+00:00"
   },
   {
     "id": "1316482055090458624",
@@ -73737,7 +74011,7 @@
         "height": 574
       }
     ],
-    "collected_at": "2026-09-14T08:53:30+00:00"
+    "collected_at": "2026-09-18T08:13:45+00:00"
   },
   {
     "id": "1313601320587350016",
@@ -73807,6 +74081,7 @@
     ],
     "matched_query_variants": [
       "#ASK_ARKADY",
+      "#Ask_Arkady",
       "#ask_arkady",
       "ask_arkady"
     ],
@@ -73825,7 +74100,7 @@
         "height": 1610
       }
     ],
-    "collected_at": "2026-09-14T08:53:30+00:00"
+    "collected_at": "2026-09-18T08:13:45+00:00"
   },
   {
     "id": "1313595540668649473",
@@ -74679,7 +74954,7 @@
         "height": 2048
       }
     ],
-    "collected_at": "2026-09-14T08:53:30+00:00"
+    "collected_at": "2026-09-18T08:13:45+00:00"
   },
   {
     "id": "1303458385803833344",
@@ -74988,7 +75263,7 @@
         "height": 799
       }
     ],
-    "collected_at": "2026-09-14T08:53:30+00:00"
+    "collected_at": "2026-09-18T08:13:45+00:00"
   },
   {
     "id": "1295318634592718854",
@@ -75036,7 +75311,7 @@
         "height": 680
       }
     ],
-    "collected_at": "2026-09-14T08:52:37+00:00"
+    "collected_at": "2026-09-18T08:13:16+00:00"
   },
   {
     "id": "1295269186969784320",
@@ -75084,7 +75359,7 @@
         "height": 680
       }
     ],
-    "collected_at": "2026-09-14T08:52:37+00:00"
+    "collected_at": "2026-09-18T08:13:16+00:00"
   },
   {
     "id": "1291969717826093056",
@@ -75192,6 +75467,7 @@
       "ASK_ARKADY"
     ],
     "matched_query_variants": [
+      "#Ask_Arkady",
       "#ask_arkady"
     ],
     "matched_feeds": [
@@ -75209,7 +75485,7 @@
         "height": 675
       }
     ],
-    "collected_at": "2026-09-14T08:53:02+00:00"
+    "collected_at": "2026-09-18T08:13:45+00:00"
   },
   {
     "id": "1290791233200295943",
@@ -75223,7 +75499,7 @@
       "screen_name": "egw_pote",
       "avatar_url": "https://pbs.twimg.com/profile_images/2046129032929140736/XOnc_Iav_200x200.jpg"
     },
-    "likes": 66,
+    "likes": 67,
     "reposts": 8,
     "quotes": 1,
     "replies": 8,
@@ -75257,7 +75533,7 @@
         "height": 2048
       }
     ],
-    "collected_at": "2026-09-14T08:53:30+00:00"
+    "collected_at": "2026-09-18T08:13:45+00:00"
   },
   {
     "id": "1289366672789340161",
@@ -75487,7 +75763,7 @@
         "height": 530
       }
     ],
-    "collected_at": "2026-09-14T08:52:37+00:00"
+    "collected_at": "2026-09-18T08:13:16+00:00"
   },
   {
     "id": "1286798150888431616",
@@ -75614,6 +75890,7 @@
       "ASK_ARKADY"
     ],
     "matched_query_variants": [
+      "#Ask_Arkady",
       "#ask_arkady"
     ],
     "matched_feeds": [
@@ -75631,7 +75908,7 @@
         "height": 420
       }
     ],
-    "collected_at": "2026-09-14T08:53:02+00:00"
+    "collected_at": "2026-09-18T08:13:45+00:00"
   },
   {
     "id": "1284301233591914502",
@@ -76868,7 +77145,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-09-14T08:52:29+00:00"
+    "collected_at": "2026-09-18T08:13:16+00:00"
   },
   {
     "id": "1274500807094939648",
@@ -77056,7 +77333,7 @@
         "height": 649
       }
     ],
-    "collected_at": "2026-09-14T08:52:37+00:00"
+    "collected_at": "2026-09-18T08:13:16+00:00"
   },
   {
     "id": "1274466129717669892",
@@ -77728,6 +78005,7 @@
       "ASK_ARKADY"
     ],
     "matched_query_variants": [
+      "#Ask_Arkady",
       "#ask_arkady",
       "Ask_Arkady",
       "ask_arkady"
@@ -77758,7 +78036,7 @@
         ]
       }
     ],
-    "collected_at": "2026-09-14T08:53:30+00:00"
+    "collected_at": "2026-09-18T08:13:45+00:00"
   },
   {
     "id": "1273453927514677256",
@@ -78387,7 +78665,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-09-08T08:07:20+00:00"
+    "collected_at": "2026-09-18T08:13:16+00:00"
   },
   {
     "id": "1266873669743251456",
@@ -79164,7 +79442,7 @@
         ]
       }
     ],
-    "collected_at": "2026-09-14T08:52:39+00:00"
+    "collected_at": "2026-09-18T08:13:16+00:00"
   },
   {
     "id": "1253809111701094406",
@@ -79394,7 +79672,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-09-14T08:52:27+00:00"
+    "collected_at": "2026-09-18T08:13:16+00:00"
   },
   {
     "id": "1253091979820482567",
@@ -79613,7 +79891,7 @@
       "TEXT"
     ],
     "media": [],
-    "collected_at": "2026-09-14T08:52:29+00:00"
+    "collected_at": "2026-09-18T08:13:16+00:00"
   },
   {
     "id": "1253043786810372097",
