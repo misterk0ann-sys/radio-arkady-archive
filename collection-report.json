@@ -1,11 +1,11 @@
 {
   "status": "ok",
-  "started_at": "2026-09-18T08:12:28+00:00",
-  "finished_at": "2026-09-18T08:16:14+00:00",
+  "started_at": "2026-09-19T08:00:41+00:00",
+  "finished_at": "2026-09-19T08:03:08+00:00",
   "search_mode": "hashtag_case_variants",
-  "previous_archive_count": 1886,
+  "previous_archive_count": 1891,
   "current_archive_count": 1891,
-  "new_unique_posts": 5,
+  "new_unique_posts": 0,
   "counts": {
     "ALL": 1891,
     "GIF": 401,
@@ -21,19 +21,19 @@
   },
   "hashtag_query_coverage": {
     "RADIO_ARKADY": {
-      "queries_with_results": 2,
-      "pages_completed": 2,
-      "raw_posts_received": 40
+      "queries_with_results": 0,
+      "pages_completed": 0,
+      "raw_posts_received": 0
     },
     "ASK_ARKADY": {
-      "queries_with_results": 2,
-      "pages_completed": 2,
-      "raw_posts_received": 70
+      "queries_with_results": 0,
+      "pages_completed": 0,
+      "raw_posts_received": 0
     },
     "NAI_POIOS_EINAI": {
-      "queries_with_results": 4,
-      "pages_completed": 4,
-      "raw_posts_received": 80
+      "queries_with_results": 0,
+      "pages_completed": 0,
+      "raw_posts_received": 0
     },
     "ARKADIOS_ARKADYO": {
       "queries_with_results": 0,
@@ -136,16 +136,6 @@
       "hashtag": "RADIO_ARKADY",
       "query": "RADIO_ARKADY",
       "feed": "latest",
-      "pages_completed": 1,
-      "raw_posts_received": 20,
-      "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
-    },
-    {
-      "hashtag": "RADIO_ARKADY",
-      "query": "RADIO_ARKADY",
-      "feed": "top",
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
@@ -155,6 +145,16 @@
     {
       "hashtag": "RADIO_ARKADY",
       "query": "RADIO_ARKADY",
+      "feed": "top",
+      "pages_completed": 0,
+      "raw_posts_received": 0,
+      "unique_posts_added": 0,
+      "stopped_by_404": true,
+      "error": null
+    },
+    {
+      "hashtag": "RADIO_ARKADY",
+      "query": "RADIO_ARKADY",
       "feed": "media",
       "pages_completed": 0,
       "raw_posts_received": 0,
@@ -176,8 +176,8 @@
       "hashtag": "RADIO_ARKADY",
       "query": "radio_arkady",
       "feed": "top",
-      "pages_completed": 1,
-      "raw_posts_received": 20,
+      "pages_completed": 0,
+      "raw_posts_received": 0,
       "unique_posts_added": 0,
       "stopped_by_404": true,
       "error": null
@@ -306,8 +306,8 @@
       "hashtag": "ASK_ARKADY",
       "query": "#Ask_Arkady",
       "feed": "media",
-      "pages_completed": 1,
-      "raw_posts_received": 50,
+      "pages_completed": 0,
+      "raw_posts_received": 0,
       "unique_posts_added": 0,
       "stopped_by_404": true,
       "error": null
@@ -346,8 +346,8 @@
       "hashtag": "ASK_ARKADY",
       "query": "ask_arkady",
       "feed": "latest",
-      "pages_completed": 1,
-      "raw_posts_received": 20,
+      "pages_completed": 0,
+      "raw_posts_received": 0,
       "unique_posts_added": 0,
       "stopped_by_404": true,
       "error": null
@@ -436,8 +436,8 @@
       "hashtag": "NAI_POIOS_EINAI",
       "query": "#nai_poios_einai",
       "feed": "latest",
-      "pages_completed": 1,
-      "raw_posts_received": 20,
+      "pages_completed": 0,
+      "raw_posts_received": 0,
       "unique_posts_added": 0,
       "stopped_by_404": true,
       "error": null
@@ -466,8 +466,8 @@
       "hashtag": "NAI_POIOS_EINAI",
       "query": "#Nai_poios_einai",
       "feed": "latest",
-      "pages_completed": 1,
-      "raw_posts_received": 20,
+      "pages_completed": 0,
+      "raw_posts_received": 0,
       "unique_posts_added": 0,
       "stopped_by_404": true,
       "error": null
@@ -506,9 +506,9 @@
       "hashtag": "NAI_POIOS_EINAI",
       "query": "#Nai_Poios_Einai",
       "feed": "top",
-      "pages_completed": 1,
-      "raw_posts_received": 20,
-      "unique_posts_added": 5,
+      "pages_completed": 0,
+      "raw_posts_received": 0,
+      "unique_posts_added": 0,
       "stopped_by_404": true,
       "error": null
     },
@@ -556,8 +556,8 @@
       "hashtag": "NAI_POIOS_EINAI",
       "query": "nai_poios_einai",
       "feed": "latest",
-      "pages_completed": 1,
-      "raw_posts_received": 20,
+      "pages_completed": 0,
+      "raw_posts_received": 0,
       "unique_posts_added": 0,
       "stopped_by_404": true,
       "error": null
