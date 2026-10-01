@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "started_at": "2026-09-30T09:39:19+00:00",
-  "finished_at": "2026-09-30T10:14:13+00:00",
+  "started_at": "2026-10-01T10:05:04+00:00",
+  "finished_at": "2026-10-01T10:43:15+00:00",
   "search_mode": "hashtag_case_variants",
-  "previous_archive_count": 4220,
-  "current_archive_count": 4232,
-  "new_unique_posts": 12,
+  "previous_archive_count": 4232,
+  "current_archive_count": 4234,
+  "new_unique_posts": 2,
   "counts": {
-    "ALL": 4232,
+    "ALL": 4234,
     "GIF": 666,
     "IMAGE": 999,
-    "TEXT": 2545,
+    "TEXT": 2547,
     "VIDEO": 22
   },
   "hashtag_counts_minimum": {
-    "RADIO_ARKADY": 1534,
+    "RADIO_ARKADY": 1536,
     "ASK_ARKADY": 950,
     "NAI_POIOS_EINAI": 912,
     "ARKADIOS_ARKADYO": 888
@@ -22,23 +22,23 @@
   "hashtag_query_coverage": {
     "RADIO_ARKADY": {
       "queries_with_results": 18,
-      "pages_completed": 257,
-      "raw_posts_received": 5487
+      "pages_completed": 261,
+      "raw_posts_received": 5609
     },
     "ASK_ARKADY": {
       "queries_with_results": 18,
-      "pages_completed": 260,
-      "raw_posts_received": 5437
+      "pages_completed": 261,
+      "raw_posts_received": 5534
     },
     "NAI_POIOS_EINAI": {
       "queries_with_results": 24,
-      "pages_completed": 304,
-      "raw_posts_received": 6592
+      "pages_completed": 335,
+      "raw_posts_received": 7074
     },
     "ARKADIOS_ARKADYO": {
-      "queries_with_results": 17,
-      "pages_completed": 210,
-      "raw_posts_received": 4500
+      "queries_with_results": 18,
+      "pages_completed": 260,
+      "raw_posts_received": 5558
     }
   },
   "queries": [
@@ -56,9 +56,9 @@
       "hashtag": "RADIO_ARKADY",
       "query": "#RADIO_ARKADY",
       "feed": "top",
-      "pages_completed": 13,
-      "raw_posts_received": 238,
-      "unique_posts_added": 0,
+      "pages_completed": 14,
+      "raw_posts_received": 234,
+      "unique_posts_added": 2,
       "stopped_by_404": false,
       "error": null
     },
@@ -66,8 +66,8 @@
       "hashtag": "RADIO_ARKADY",
       "query": "#RADIO_ARKADY",
       "feed": "media",
-      "pages_completed": 3,
-      "raw_posts_received": 100,
+      "pages_completed": 7,
+      "raw_posts_received": 231,
       "unique_posts_added": 0,
       "stopped_by_404": false,
       "error": null
@@ -85,6 +85,156 @@
     {
       "hashtag": "RADIO_ARKADY",
       "query": "#radio_arkady",
+      "feed": "top",
+      "pages_completed": 12,
+      "raw_posts_received": 220,
+      "unique_posts_added": 0,
+      "stopped_by_404": false,
+      "error": null
+    },
+    {
+      "hashtag": "RADIO_ARKADY",
+      "query": "#radio_arkady",
+      "feed": "media",
+      "pages_completed": 6,
+      "raw_posts_received": 219,
+      "unique_posts_added": 0,
+      "stopped_by_404": false,
+      "error": null
+    },
+    {
+      "hashtag": "RADIO_ARKADY",
+      "query": "#Radio_Arkady",
+      "feed": "latest",
+      "pages_completed": 25,
+      "raw_posts_received": 500,
+      "unique_posts_added": 0,
+      "stopped_by_404": false,
+      "error": null
+    },
+    {
+      "hashtag": "RADIO_ARKADY",
+      "query": "#Radio_Arkady",
+      "feed": "top",
+      "pages_completed": 13,
+      "raw_posts_received": 227,
+      "unique_posts_added": 0,
+      "stopped_by_404": false,
+      "error": null
+    },
+    {
+      "hashtag": "RADIO_ARKADY",
+      "query": "#Radio_Arkady",
+      "feed": "media",
+      "pages_completed": 7,
+      "raw_posts_received": 231,
+      "unique_posts_added": 0,
+      "stopped_by_404": false,
+      "error": null
+    },
+    {
+      "hashtag": "RADIO_ARKADY",
+      "query": "RADIO_ARKADY",
+      "feed": "latest",
+      "pages_completed": 25,
+      "raw_posts_received": 500,
+      "unique_posts_added": 0,
+      "stopped_by_404": false,
+      "error": null
+    },
+    {
+      "hashtag": "RADIO_ARKADY",
+      "query": "RADIO_ARKADY",
+      "feed": "top",
+      "pages_completed": 13,
+      "raw_posts_received": 234,
+      "unique_posts_added": 0,
+      "stopped_by_404": false,
+      "error": null
+    },
+    {
+      "hashtag": "RADIO_ARKADY",
+      "query": "RADIO_ARKADY",
+      "feed": "media",
+      "pages_completed": 5,
+      "raw_posts_received": 169,
+      "unique_posts_added": 0,
+      "stopped_by_404": false,
+      "error": null
+    },
+    {
+      "hashtag": "RADIO_ARKADY",
+      "query": "radio_arkady",
+      "feed": "latest",
+      "pages_completed": 25,
+      "raw_posts_received": 500,
+      "unique_posts_added": 0,
+      "stopped_by_404": false,
+      "error": null
+    },
+    {
+      "hashtag": "RADIO_ARKADY",
+      "query": "radio_arkady",
+      "feed": "top",
+      "pages_completed": 12,
+      "raw_posts_received": 202,
+      "unique_posts_added": 0,
+      "stopped_by_404": false,
+      "error": null
+    },
+    {
+      "hashtag": "RADIO_ARKADY",
+      "query": "radio_arkady",
+      "feed": "media",
+      "pages_completed": 6,
+      "raw_posts_received": 231,
+      "unique_posts_added": 0,
+      "stopped_by_404": false,
+      "error": null
+    },
+    {
+      "hashtag": "RADIO_ARKADY",
+      "query": "Radio_Arkady",
+      "feed": "latest",
+      "pages_completed": 25,
+      "raw_posts_received": 500,
+      "unique_posts_added": 0,
+      "stopped_by_404": false,
+      "error": null
+    },
+    {
+      "hashtag": "RADIO_ARKADY",
+      "query": "Radio_Arkady",
+      "feed": "top",
+      "pages_completed": 10,
+      "raw_posts_received": 180,
+      "unique_posts_added": 0,
+      "stopped_by_404": false,
+      "error": null
+    },
+    {
+      "hashtag": "RADIO_ARKADY",
+      "query": "Radio_Arkady",
+      "feed": "media",
+      "pages_completed": 6,
+      "raw_posts_received": 231,
+      "unique_posts_added": 0,
+      "stopped_by_404": false,
+      "error": null
+    },
+    {
+      "hashtag": "ASK_ARKADY",
+      "query": "#ASK_ARKADY",
+      "feed": "latest",
+      "pages_completed": 25,
+      "raw_posts_received": 500,
+      "unique_posts_added": 0,
+      "stopped_by_404": false,
+      "error": null
+    },
+    {
+      "hashtag": "ASK_ARKADY",
+      "query": "#ASK_ARKADY",
       "feed": "top",
       "pages_completed": 12,
       "raw_posts_received": 211,
@@ -93,48 +243,18 @@
       "error": null
     },
     {
-      "hashtag": "RADIO_ARKADY",
-      "query": "#radio_arkady",
-      "feed": "media",
-      "pages_completed": 6,
-      "raw_posts_received": 231,
-      "unique_posts_added": 1,
-      "stopped_by_404": false,
-      "error": null
-    },
-    {
-      "hashtag": "RADIO_ARKADY",
-      "query": "#Radio_Arkady",
-      "feed": "latest",
-      "pages_completed": 25,
-      "raw_posts_received": 500,
-      "unique_posts_added": 0,
-      "stopped_by_404": false,
-      "error": null
-    },
-    {
-      "hashtag": "RADIO_ARKADY",
-      "query": "#Radio_Arkady",
-      "feed": "top",
-      "pages_completed": 10,
-      "raw_posts_received": 163,
-      "unique_posts_added": 0,
-      "stopped_by_404": false,
-      "error": null
-    },
-    {
-      "hashtag": "RADIO_ARKADY",
-      "query": "#Radio_Arkady",
+      "hashtag": "ASK_ARKADY",
+      "query": "#ASK_ARKADY",
       "feed": "media",
       "pages_completed": 7,
-      "raw_posts_received": 232,
+      "raw_posts_received": 219,
       "unique_posts_added": 0,
       "stopped_by_404": false,
       "error": null
     },
     {
-      "hashtag": "RADIO_ARKADY",
-      "query": "RADIO_ARKADY",
+      "hashtag": "ASK_ARKADY",
+      "query": "#ask_arkady",
       "feed": "latest",
       "pages_completed": 25,
       "raw_posts_received": 500,
@@ -143,28 +263,28 @@
       "error": null
     },
     {
-      "hashtag": "RADIO_ARKADY",
-      "query": "RADIO_ARKADY",
+      "hashtag": "ASK_ARKADY",
+      "query": "#ask_arkady",
       "feed": "top",
       "pages_completed": 13,
-      "raw_posts_received": 233,
-      "unique_posts_added": 1,
-      "stopped_by_404": false,
-      "error": null
-    },
-    {
-      "hashtag": "RADIO_ARKADY",
-      "query": "RADIO_ARKADY",
-      "feed": "media",
-      "pages_completed": 6,
-      "raw_posts_received": 206,
+      "raw_posts_received": 237,
       "unique_posts_added": 0,
       "stopped_by_404": false,
       "error": null
     },
     {
-      "hashtag": "RADIO_ARKADY",
-      "query": "radio_arkady",
+      "hashtag": "ASK_ARKADY",
+      "query": "#ask_arkady",
+      "feed": "media",
+      "pages_completed": 5,
+      "raw_posts_received": 173,
+      "unique_posts_added": 0,
+      "stopped_by_404": false,
+      "error": null
+    },
+    {
+      "hashtag": "ASK_ARKADY",
+      "query": "#Ask_Arkady",
       "feed": "latest",
       "pages_completed": 25,
       "raw_posts_received": 500,
@@ -173,131 +293,11 @@
       "error": null
     },
     {
-      "hashtag": "RADIO_ARKADY",
-      "query": "radio_arkady",
+      "hashtag": "ASK_ARKADY",
+      "query": "#Ask_Arkady",
       "feed": "top",
       "pages_completed": 10,
-      "raw_posts_received": 177,
-      "unique_posts_added": 0,
-      "stopped_by_404": false,
-      "error": null
-    },
-    {
-      "hashtag": "RADIO_ARKADY",
-      "query": "radio_arkady",
-      "feed": "media",
-      "pages_completed": 7,
-      "raw_posts_received": 231,
-      "unique_posts_added": 0,
-      "stopped_by_404": false,
-      "error": null
-    },
-    {
-      "hashtag": "RADIO_ARKADY",
-      "query": "Radio_Arkady",
-      "feed": "latest",
-      "pages_completed": 25,
-      "raw_posts_received": 500,
-      "unique_posts_added": 0,
-      "stopped_by_404": false,
-      "error": null
-    },
-    {
-      "hashtag": "RADIO_ARKADY",
-      "query": "Radio_Arkady",
-      "feed": "top",
-      "pages_completed": 14,
-      "raw_posts_received": 234,
-      "unique_posts_added": 0,
-      "stopped_by_404": false,
-      "error": null
-    },
-    {
-      "hashtag": "RADIO_ARKADY",
-      "query": "Radio_Arkady",
-      "feed": "media",
-      "pages_completed": 6,
-      "raw_posts_received": 231,
-      "unique_posts_added": 0,
-      "stopped_by_404": false,
-      "error": null
-    },
-    {
-      "hashtag": "ASK_ARKADY",
-      "query": "#ASK_ARKADY",
-      "feed": "latest",
-      "pages_completed": 25,
-      "raw_posts_received": 500,
-      "unique_posts_added": 0,
-      "stopped_by_404": false,
-      "error": null
-    },
-    {
-      "hashtag": "ASK_ARKADY",
-      "query": "#ASK_ARKADY",
-      "feed": "top",
-      "pages_completed": 14,
-      "raw_posts_received": 241,
-      "unique_posts_added": 2,
-      "stopped_by_404": false,
-      "error": null
-    },
-    {
-      "hashtag": "ASK_ARKADY",
-      "query": "#ASK_ARKADY",
-      "feed": "media",
-      "pages_completed": 4,
-      "raw_posts_received": 130,
-      "unique_posts_added": 0,
-      "stopped_by_404": false,
-      "error": null
-    },
-    {
-      "hashtag": "ASK_ARKADY",
-      "query": "#ask_arkady",
-      "feed": "latest",
-      "pages_completed": 25,
-      "raw_posts_received": 500,
-      "unique_posts_added": 0,
-      "stopped_by_404": false,
-      "error": null
-    },
-    {
-      "hashtag": "ASK_ARKADY",
-      "query": "#ask_arkady",
-      "feed": "top",
-      "pages_completed": 14,
-      "raw_posts_received": 241,
-      "unique_posts_added": 0,
-      "stopped_by_404": false,
-      "error": null
-    },
-    {
-      "hashtag": "ASK_ARKADY",
-      "query": "#ask_arkady",
-      "feed": "media",
-      "pages_completed": 7,
-      "raw_posts_received": 220,
-      "unique_posts_added": 2,
-      "stopped_by_404": false,
-      "error": null
-    },
-    {
-      "hashtag": "ASK_ARKADY",
-      "query": "#Ask_Arkady",
-      "feed": "latest",
-      "pages_completed": 25,
-      "raw_posts_received": 500,
-      "unique_posts_added": 0,
-      "stopped_by_404": false,
-      "error": null
-    },
-    {
-      "hashtag": "ASK_ARKADY",
-      "query": "#Ask_Arkady",
-      "feed": "top",
-      "pages_completed": 12,
-      "raw_posts_received": 220,
+      "raw_posts_received": 184,
       "unique_posts_added": 0,
       "stopped_by_404": false,
       "error": null
@@ -307,7 +307,7 @@
       "query": "#Ask_Arkady",
       "feed": "media",
       "pages_completed": 6,
-      "raw_posts_received": 220,
+      "raw_posts_received": 219,
       "unique_posts_added": 0,
       "stopped_by_404": false,
       "error": null
@@ -326,8 +326,8 @@
       "hashtag": "ASK_ARKADY",
       "query": "ASK_ARKADY",
       "feed": "top",
-      "pages_completed": 10,
-      "raw_posts_received": 178,
+      "pages_completed": 13,
+      "raw_posts_received": 242,
       "unique_posts_added": 0,
       "stopped_by_404": false,
       "error": null
@@ -337,7 +337,7 @@
       "query": "ASK_ARKADY",
       "feed": "media",
       "pages_completed": 5,
-      "raw_posts_received": 116,
+      "raw_posts_received": 164,
       "unique_posts_added": 0,
       "stopped_by_404": false,
       "error": null
@@ -347,7 +347,7 @@
       "query": "ask_arkady",
       "feed": "latest",
       "pages_completed": 25,
-      "raw_posts_received": 483,
+      "raw_posts_received": 500,
       "unique_posts_added": 0,
       "stopped_by_404": false,
       "error": null
@@ -356,7 +356,17 @@
       "hashtag": "ASK_ARKADY",
       "query": "ask_arkady",
       "feed": "top",
-      "pages_completed": 13,
+      "pages_completed": 12,
+      "raw_posts_received": 206,
+      "unique_posts_added": 0,
+      "stopped_by_404": false,
+      "error": null
+    },
+    {
+      "hashtag": "ASK_ARKADY",
+      "query": "ask_arkady",
+      "feed": "media",
+      "pages_completed": 7,
       "raw_posts_received": 218,
       "unique_posts_added": 0,
       "stopped_by_404": false,
@@ -364,16 +374,6 @@
     },
     {
       "hashtag": "ASK_ARKADY",
-      "query": "ask_arkady",
-      "feed": "media",
-      "pages_completed": 6,
-      "raw_posts_received": 221,
-      "unique_posts_added": 0,
-      "stopped_by_404": false,
-      "error": null
-    },
-    {
-      "hashtag": "ASK_ARKADY",
       "query": "Ask_Arkady",
       "feed": "latest",
       "pages_completed": 25,
@@ -386,8 +386,8 @@
       "hashtag": "ASK_ARKADY",
       "query": "Ask_Arkady",
       "feed": "top",
-      "pages_completed": 13,
-      "raw_posts_received": 241,
+      "pages_completed": 14,
+      "raw_posts_received": 243,
       "unique_posts_added": 0,
       "stopped_by_404": false,
       "error": null
@@ -396,8 +396,8 @@
       "hashtag": "ASK_ARKADY",
       "query": "Ask_Arkady",
       "feed": "media",
-      "pages_completed": 6,
-      "raw_posts_received": 208,
+      "pages_completed": 7,
+      "raw_posts_received": 218,
       "unique_posts_added": 0,
       "stopped_by_404": false,
       "error": null
@@ -406,17 +406,27 @@
       "hashtag": "NAI_POIOS_EINAI",
       "query": "#NAI_POIOS_EINAI",
       "feed": "latest",
+      "pages_completed": 25,
+      "raw_posts_received": 500,
+      "unique_posts_added": 0,
+      "stopped_by_404": false,
+      "error": null
+    },
+    {
+      "hashtag": "NAI_POIOS_EINAI",
+      "query": "#NAI_POIOS_EINAI",
+      "feed": "top",
+      "pages_completed": 11,
+      "raw_posts_received": 194,
+      "unique_posts_added": 0,
+      "stopped_by_404": false,
+      "error": null
+    },
+    {
+      "hashtag": "NAI_POIOS_EINAI",
+      "query": "#NAI_POIOS_EINAI",
+      "feed": "media",
       "pages_completed": 5,
-      "raw_posts_received": 100,
-      "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
-    },
-    {
-      "hashtag": "NAI_POIOS_EINAI",
-      "query": "#NAI_POIOS_EINAI",
-      "feed": "top",
-      "pages_completed": 9,
       "raw_posts_received": 160,
       "unique_posts_added": 0,
       "stopped_by_404": false,
@@ -424,16 +434,6 @@
     },
     {
       "hashtag": "NAI_POIOS_EINAI",
-      "query": "#NAI_POIOS_EINAI",
-      "feed": "media",
-      "pages_completed": 7,
-      "raw_posts_received": 232,
-      "unique_posts_added": 0,
-      "stopped_by_404": false,
-      "error": null
-    },
-    {
-      "hashtag": "NAI_POIOS_EINAI",
       "query": "#nai_poios_einai",
       "feed": "latest",
       "pages_completed": 25,
@@ -446,8 +446,8 @@
       "hashtag": "NAI_POIOS_EINAI",
       "query": "#nai_poios_einai",
       "feed": "top",
-      "pages_completed": 8,
-      "raw_posts_received": 121,
+      "pages_completed": 12,
+      "raw_posts_received": 218,
       "unique_posts_added": 0,
       "stopped_by_404": false,
       "error": null
@@ -456,8 +456,8 @@
       "hashtag": "NAI_POIOS_EINAI",
       "query": "#nai_poios_einai",
       "feed": "media",
-      "pages_completed": 7,
-      "raw_posts_received": 232,
+      "pages_completed": 4,
+      "raw_posts_received": 133,
       "unique_posts_added": 0,
       "stopped_by_404": false,
       "error": null
@@ -475,180 +475,180 @@
     {
       "hashtag": "NAI_POIOS_EINAI",
       "query": "#Nai_poios_einai",
+      "feed": "top",
+      "pages_completed": 12,
+      "raw_posts_received": 215,
+      "unique_posts_added": 0,
+      "stopped_by_404": false,
+      "error": null
+    },
+    {
+      "hashtag": "NAI_POIOS_EINAI",
+      "query": "#Nai_poios_einai",
+      "feed": "media",
+      "pages_completed": 6,
+      "raw_posts_received": 232,
+      "unique_posts_added": 0,
+      "stopped_by_404": false,
+      "error": null
+    },
+    {
+      "hashtag": "NAI_POIOS_EINAI",
+      "query": "#Nai_Poios_Einai",
+      "feed": "latest",
+      "pages_completed": 25,
+      "raw_posts_received": 500,
+      "unique_posts_added": 0,
+      "stopped_by_404": false,
+      "error": null
+    },
+    {
+      "hashtag": "NAI_POIOS_EINAI",
+      "query": "#Nai_Poios_Einai",
+      "feed": "top",
+      "pages_completed": 12,
+      "raw_posts_received": 215,
+      "unique_posts_added": 0,
+      "stopped_by_404": false,
+      "error": null
+    },
+    {
+      "hashtag": "NAI_POIOS_EINAI",
+      "query": "#Nai_Poios_Einai",
+      "feed": "media",
+      "pages_completed": 6,
+      "raw_posts_received": 232,
+      "unique_posts_added": 0,
+      "stopped_by_404": false,
+      "error": null
+    },
+    {
+      "hashtag": "NAI_POIOS_EINAI",
+      "query": "NAI_POIOS_EINAI",
+      "feed": "latest",
+      "pages_completed": 25,
+      "raw_posts_received": 500,
+      "unique_posts_added": 0,
+      "stopped_by_404": false,
+      "error": null
+    },
+    {
+      "hashtag": "NAI_POIOS_EINAI",
+      "query": "NAI_POIOS_EINAI",
       "feed": "top",
       "pages_completed": 13,
-      "raw_posts_received": 225,
-      "unique_posts_added": 0,
-      "stopped_by_404": false,
-      "error": null
-    },
-    {
-      "hashtag": "NAI_POIOS_EINAI",
-      "query": "#Nai_poios_einai",
-      "feed": "media",
-      "pages_completed": 7,
-      "raw_posts_received": 232,
-      "unique_posts_added": 0,
-      "stopped_by_404": false,
-      "error": null
-    },
-    {
-      "hashtag": "NAI_POIOS_EINAI",
-      "query": "#Nai_Poios_Einai",
-      "feed": "latest",
-      "pages_completed": 25,
-      "raw_posts_received": 500,
-      "unique_posts_added": 0,
-      "stopped_by_404": false,
-      "error": null
-    },
-    {
-      "hashtag": "NAI_POIOS_EINAI",
-      "query": "#Nai_Poios_Einai",
-      "feed": "top",
-      "pages_completed": 13,
-      "raw_posts_received": 224,
-      "unique_posts_added": 0,
-      "stopped_by_404": false,
-      "error": null
-    },
-    {
-      "hashtag": "NAI_POIOS_EINAI",
-      "query": "#Nai_Poios_Einai",
-      "feed": "media",
-      "pages_completed": 6,
-      "raw_posts_received": 201,
-      "unique_posts_added": 0,
-      "stopped_by_404": false,
-      "error": null
-    },
-    {
-      "hashtag": "NAI_POIOS_EINAI",
-      "query": "NAI_POIOS_EINAI",
-      "feed": "latest",
-      "pages_completed": 25,
-      "raw_posts_received": 500,
-      "unique_posts_added": 0,
-      "stopped_by_404": false,
-      "error": null
-    },
-    {
-      "hashtag": "NAI_POIOS_EINAI",
-      "query": "NAI_POIOS_EINAI",
-      "feed": "top",
-      "pages_completed": 7,
-      "raw_posts_received": 117,
-      "unique_posts_added": 0,
-      "stopped_by_404": false,
-      "error": null
-    },
-    {
-      "hashtag": "NAI_POIOS_EINAI",
-      "query": "NAI_POIOS_EINAI",
-      "feed": "media",
-      "pages_completed": 7,
-      "raw_posts_received": 237,
-      "unique_posts_added": 0,
-      "stopped_by_404": false,
-      "error": null
-    },
-    {
-      "hashtag": "NAI_POIOS_EINAI",
-      "query": "nai_poios_einai",
-      "feed": "latest",
-      "pages_completed": 25,
-      "raw_posts_received": 500,
-      "unique_posts_added": 0,
-      "stopped_by_404": false,
-      "error": null
-    },
-    {
-      "hashtag": "NAI_POIOS_EINAI",
-      "query": "nai_poios_einai",
-      "feed": "top",
-      "pages_completed": 14,
-      "raw_posts_received": 237,
-      "unique_posts_added": 0,
-      "stopped_by_404": false,
-      "error": null
-    },
-    {
-      "hashtag": "NAI_POIOS_EINAI",
-      "query": "nai_poios_einai",
-      "feed": "media",
-      "pages_completed": 7,
-      "raw_posts_received": 237,
-      "unique_posts_added": 0,
-      "stopped_by_404": false,
-      "error": null
-    },
-    {
-      "hashtag": "NAI_POIOS_EINAI",
-      "query": "Nai_poios_einai",
-      "feed": "latest",
-      "pages_completed": 25,
-      "raw_posts_received": 500,
-      "unique_posts_added": 0,
-      "stopped_by_404": false,
-      "error": null
-    },
-    {
-      "hashtag": "NAI_POIOS_EINAI",
-      "query": "Nai_poios_einai",
-      "feed": "top",
-      "pages_completed": 10,
-      "raw_posts_received": 176,
-      "unique_posts_added": 0,
-      "stopped_by_404": false,
-      "error": null
-    },
-    {
-      "hashtag": "NAI_POIOS_EINAI",
-      "query": "Nai_poios_einai",
-      "feed": "media",
-      "pages_completed": 6,
-      "raw_posts_received": 237,
-      "unique_posts_added": 0,
-      "stopped_by_404": false,
-      "error": null
-    },
-    {
-      "hashtag": "NAI_POIOS_EINAI",
-      "query": "Nai_Poios_Einai",
-      "feed": "latest",
-      "pages_completed": 8,
-      "raw_posts_received": 160,
-      "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
-    },
-    {
-      "hashtag": "NAI_POIOS_EINAI",
-      "query": "Nai_Poios_Einai",
-      "feed": "top",
-      "pages_completed": 14,
-      "raw_posts_received": 237,
-      "unique_posts_added": 0,
-      "stopped_by_404": false,
-      "error": null
-    },
-    {
-      "hashtag": "NAI_POIOS_EINAI",
-      "query": "Nai_Poios_Einai",
-      "feed": "media",
-      "pages_completed": 6,
       "raw_posts_received": 227,
       "unique_posts_added": 0,
       "stopped_by_404": false,
       "error": null
     },
     {
+      "hashtag": "NAI_POIOS_EINAI",
+      "query": "NAI_POIOS_EINAI",
+      "feed": "media",
+      "pages_completed": 4,
+      "raw_posts_received": 118,
+      "unique_posts_added": 0,
+      "stopped_by_404": false,
+      "error": null
+    },
+    {
+      "hashtag": "NAI_POIOS_EINAI",
+      "query": "nai_poios_einai",
+      "feed": "latest",
+      "pages_completed": 25,
+      "raw_posts_received": 500,
+      "unique_posts_added": 0,
+      "stopped_by_404": false,
+      "error": null
+    },
+    {
+      "hashtag": "NAI_POIOS_EINAI",
+      "query": "nai_poios_einai",
+      "feed": "top",
+      "pages_completed": 11,
+      "raw_posts_received": 199,
+      "unique_posts_added": 0,
+      "stopped_by_404": false,
+      "error": null
+    },
+    {
+      "hashtag": "NAI_POIOS_EINAI",
+      "query": "nai_poios_einai",
+      "feed": "media",
+      "pages_completed": 5,
+      "raw_posts_received": 168,
+      "unique_posts_added": 0,
+      "stopped_by_404": false,
+      "error": null
+    },
+    {
+      "hashtag": "NAI_POIOS_EINAI",
+      "query": "Nai_poios_einai",
+      "feed": "latest",
+      "pages_completed": 25,
+      "raw_posts_received": 500,
+      "unique_posts_added": 0,
+      "stopped_by_404": false,
+      "error": null
+    },
+    {
+      "hashtag": "NAI_POIOS_EINAI",
+      "query": "Nai_poios_einai",
+      "feed": "top",
+      "pages_completed": 13,
+      "raw_posts_received": 237,
+      "unique_posts_added": 0,
+      "stopped_by_404": false,
+      "error": null
+    },
+    {
+      "hashtag": "NAI_POIOS_EINAI",
+      "query": "Nai_poios_einai",
+      "feed": "media",
+      "pages_completed": 4,
+      "raw_posts_received": 141,
+      "unique_posts_added": 0,
+      "stopped_by_404": false,
+      "error": null
+    },
+    {
+      "hashtag": "NAI_POIOS_EINAI",
+      "query": "Nai_Poios_Einai",
+      "feed": "latest",
+      "pages_completed": 25,
+      "raw_posts_received": 500,
+      "unique_posts_added": 0,
+      "stopped_by_404": false,
+      "error": null
+    },
+    {
+      "hashtag": "NAI_POIOS_EINAI",
+      "query": "Nai_Poios_Einai",
+      "feed": "top",
+      "pages_completed": 13,
+      "raw_posts_received": 237,
+      "unique_posts_added": 0,
+      "stopped_by_404": false,
+      "error": null
+    },
+    {
+      "hashtag": "NAI_POIOS_EINAI",
+      "query": "Nai_Poios_Einai",
+      "feed": "media",
+      "pages_completed": 4,
+      "raw_posts_received": 148,
+      "unique_posts_added": 0,
+      "stopped_by_404": false,
+      "error": null
+    },
+    {
       "hashtag": "ARKADIOS_ARKADYO",
       "query": "#ARKADIOS_ARKADYO",
       "feed": "latest",
       "pages_completed": 25,
       "raw_posts_received": 500,
-      "unique_posts_added": 1,
+      "unique_posts_added": 0,
       "stopped_by_404": false,
       "error": null
     },
@@ -656,8 +656,8 @@
       "hashtag": "ARKADIOS_ARKADYO",
       "query": "#ARKADIOS_ARKADYO",
       "feed": "top",
-      "pages_completed": 13,
-      "raw_posts_received": 225,
+      "pages_completed": 12,
+      "raw_posts_received": 217,
       "unique_posts_added": 0,
       "stopped_by_404": false,
       "error": null
@@ -666,9 +666,9 @@
       "hashtag": "ARKADIOS_ARKADYO",
       "query": "#ARKADIOS_ARKADYO",
       "feed": "media",
-      "pages_completed": 7,
-      "raw_posts_received": 220,
-      "unique_posts_added": 4,
+      "pages_completed": 5,
+      "raw_posts_received": 163,
+      "unique_posts_added": 0,
       "stopped_by_404": false,
       "error": null
     },
@@ -687,8 +687,8 @@
       "query": "#arkadios_arkadyo",
       "feed": "top",
       "pages_completed": 13,
-      "raw_posts_received": 228,
-      "unique_posts_added": 1,
+      "raw_posts_received": 230,
+      "unique_posts_added": 0,
       "stopped_by_404": false,
       "error": null
     },
@@ -697,7 +697,7 @@
       "query": "#arkadios_arkadyo",
       "feed": "media",
       "pages_completed": 6,
-      "raw_posts_received": 222,
+      "raw_posts_received": 198,
       "unique_posts_added": 0,
       "stopped_by_404": false,
       "error": null
@@ -706,15 +706,45 @@
       "hashtag": "ARKADIOS_ARKADYO",
       "query": "#Arkadios_Arkadyo",
       "feed": "latest",
-      "pages_completed": 7,
-      "raw_posts_received": 140,
+      "pages_completed": 25,
+      "raw_posts_received": 500,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
+      "stopped_by_404": false,
       "error": null
     },
     {
       "hashtag": "ARKADIOS_ARKADYO",
       "query": "#Arkadios_Arkadyo",
+      "feed": "top",
+      "pages_completed": 11,
+      "raw_posts_received": 198,
+      "unique_posts_added": 0,
+      "stopped_by_404": false,
+      "error": null
+    },
+    {
+      "hashtag": "ARKADIOS_ARKADYO",
+      "query": "#Arkadios_Arkadyo",
+      "feed": "media",
+      "pages_completed": 6,
+      "raw_posts_received": 220,
+      "unique_posts_added": 0,
+      "stopped_by_404": false,
+      "error": null
+    },
+    {
+      "hashtag": "ARKADIOS_ARKADYO",
+      "query": "ARKADIOS_ARKADYO",
+      "feed": "latest",
+      "pages_completed": 25,
+      "raw_posts_received": 500,
+      "unique_posts_added": 0,
+      "stopped_by_404": false,
+      "error": null
+    },
+    {
+      "hashtag": "ARKADIOS_ARKADYO",
+      "query": "ARKADIOS_ARKADYO",
       "feed": "top",
       "pages_completed": 12,
       "raw_posts_received": 204,
@@ -724,40 +754,10 @@
     },
     {
       "hashtag": "ARKADIOS_ARKADYO",
-      "query": "#Arkadios_Arkadyo",
+      "query": "ARKADIOS_ARKADYO",
       "feed": "media",
       "pages_completed": 6,
-      "raw_posts_received": 220,
-      "unique_posts_added": 0,
-      "stopped_by_404": false,
-      "error": null
-    },
-    {
-      "hashtag": "ARKADIOS_ARKADYO",
-      "query": "ARKADIOS_ARKADYO",
-      "feed": "latest",
-      "pages_completed": 1,
-      "raw_posts_received": 0,
-      "unique_posts_added": 0,
-      "stopped_by_404": false,
-      "error": null
-    },
-    {
-      "hashtag": "ARKADIOS_ARKADYO",
-      "query": "ARKADIOS_ARKADYO",
-      "feed": "top",
-      "pages_completed": 13,
-      "raw_posts_received": 237,
-      "unique_posts_added": 0,
-      "stopped_by_404": false,
-      "error": null
-    },
-    {
-      "hashtag": "ARKADIOS_ARKADYO",
-      "query": "ARKADIOS_ARKADYO",
-      "feed": "media",
-      "pages_completed": 4,
-      "raw_posts_received": 140,
+      "raw_posts_received": 223,
       "unique_posts_added": 0,
       "stopped_by_404": false,
       "error": null
@@ -776,8 +776,8 @@
       "hashtag": "ARKADIOS_ARKADYO",
       "query": "arkadios_arkadyo",
       "feed": "top",
-      "pages_completed": 7,
-      "raw_posts_received": 119,
+      "pages_completed": 12,
+      "raw_posts_received": 221,
       "unique_posts_added": 0,
       "stopped_by_404": false,
       "error": null
@@ -786,8 +786,8 @@
       "hashtag": "ARKADIOS_ARKADYO",
       "query": "arkadios_arkadyo",
       "feed": "media",
-      "pages_completed": 4,
-      "raw_posts_received": 146,
+      "pages_completed": 6,
+      "raw_posts_received": 223,
       "unique_posts_added": 0,
       "stopped_by_404": false,
       "error": null
@@ -806,8 +806,8 @@
       "hashtag": "ARKADIOS_ARKADYO",
       "query": "Arkadios_Arkadyo",
       "feed": "top",
-      "pages_completed": 10,
-      "raw_posts_received": 170,
+      "pages_completed": 14,
+      "raw_posts_received": 238,
       "unique_posts_added": 0,
       "stopped_by_404": false,
       "error": null
@@ -817,7 +817,7 @@
       "query": "Arkadios_Arkadyo",
       "feed": "media",
       "pages_completed": 7,
-      "raw_posts_received": 229,
+      "raw_posts_received": 223,
       "unique_posts_added": 0,
       "stopped_by_404": false,
       "error": null
