@@ -1,7 +1,7 @@
 {
   "status": "ok",
-  "started_at": "2026-11-20T11:31:19+00:00",
-  "finished_at": "2026-11-20T11:36:30+00:00",
+  "started_at": "2026-11-21T10:57:02+00:00",
+  "finished_at": "2026-11-21T11:18:04+00:00",
   "search_mode": "hashtag_case_variants",
   "previous_archive_count": 5815,
   "current_archive_count": 5815,
@@ -49,8 +49,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "RADIO_ARKADY",
@@ -59,8 +59,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "RADIO_ARKADY",
@@ -69,8 +69,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "RADIO_ARKADY",
@@ -79,8 +79,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "RADIO_ARKADY",
@@ -89,8 +89,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "RADIO_ARKADY",
@@ -99,8 +99,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "RADIO_ARKADY",
@@ -109,8 +109,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "RADIO_ARKADY",
@@ -119,8 +119,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "RADIO_ARKADY",
@@ -129,8 +129,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "RADIO_ARKADY",
@@ -139,8 +139,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "RADIO_ARKADY",
@@ -149,8 +149,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "RADIO_ARKADY",
@@ -159,8 +159,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "RADIO_ARKADY",
@@ -169,8 +169,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "RADIO_ARKADY",
@@ -179,8 +179,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "RADIO_ARKADY",
@@ -189,8 +189,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "RADIO_ARKADY",
@@ -199,8 +199,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "RADIO_ARKADY",
@@ -209,8 +209,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "RADIO_ARKADY",
@@ -219,8 +219,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "ASK_ARKADY",
@@ -229,8 +229,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "ASK_ARKADY",
@@ -239,8 +239,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "ASK_ARKADY",
@@ -249,8 +249,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "ASK_ARKADY",
@@ -259,8 +259,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "ASK_ARKADY",
@@ -269,8 +269,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "ASK_ARKADY",
@@ -279,8 +279,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "ASK_ARKADY",
@@ -289,8 +289,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "ASK_ARKADY",
@@ -299,8 +299,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "ASK_ARKADY",
@@ -309,8 +309,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "ASK_ARKADY",
@@ -319,8 +319,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "ASK_ARKADY",
@@ -329,8 +329,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "ASK_ARKADY",
@@ -339,8 +339,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "ASK_ARKADY",
@@ -349,8 +349,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "ASK_ARKADY",
@@ -359,8 +359,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "ASK_ARKADY",
@@ -369,8 +369,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "ASK_ARKADY",
@@ -379,8 +379,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "ASK_ARKADY",
@@ -389,8 +389,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "ASK_ARKADY",
@@ -399,8 +399,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "NAI_POIOS_EINAI",
@@ -409,8 +409,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "NAI_POIOS_EINAI",
@@ -419,8 +419,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "NAI_POIOS_EINAI",
@@ -429,8 +429,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "NAI_POIOS_EINAI",
@@ -439,8 +439,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "NAI_POIOS_EINAI",
@@ -449,8 +449,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "NAI_POIOS_EINAI",
@@ -459,8 +459,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "NAI_POIOS_EINAI",
@@ -469,8 +469,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "NAI_POIOS_EINAI",
@@ -479,8 +479,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "NAI_POIOS_EINAI",
@@ -489,8 +489,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "NAI_POIOS_EINAI",
@@ -499,8 +499,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "NAI_POIOS_EINAI",
@@ -509,8 +509,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "NAI_POIOS_EINAI",
@@ -519,8 +519,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "NAI_POIOS_EINAI",
@@ -529,8 +529,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "NAI_POIOS_EINAI",
@@ -539,8 +539,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "NAI_POIOS_EINAI",
@@ -549,8 +549,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "NAI_POIOS_EINAI",
@@ -559,8 +559,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "NAI_POIOS_EINAI",
@@ -569,8 +569,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "NAI_POIOS_EINAI",
@@ -579,8 +579,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "NAI_POIOS_EINAI",
@@ -589,8 +589,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "NAI_POIOS_EINAI",
@@ -599,8 +599,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "NAI_POIOS_EINAI",
@@ -609,8 +609,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "NAI_POIOS_EINAI",
@@ -619,8 +619,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "NAI_POIOS_EINAI",
@@ -629,8 +629,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "NAI_POIOS_EINAI",
@@ -639,8 +639,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "ARKADIOS_ARKADYO",
@@ -649,8 +649,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "ARKADIOS_ARKADYO",
@@ -659,8 +659,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "ARKADIOS_ARKADYO",
@@ -669,8 +669,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "ARKADIOS_ARKADYO",
@@ -679,8 +679,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "ARKADIOS_ARKADYO",
@@ -689,8 +689,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "ARKADIOS_ARKADYO",
@@ -699,8 +699,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "ARKADIOS_ARKADYO",
@@ -709,8 +709,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "ARKADIOS_ARKADYO",
@@ -719,8 +719,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "ARKADIOS_ARKADYO",
@@ -729,8 +729,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "ARKADIOS_ARKADYO",
@@ -739,8 +739,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "ARKADIOS_ARKADYO",
@@ -749,8 +749,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "ARKADIOS_ARKADYO",
@@ -759,8 +759,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "ARKADIOS_ARKADYO",
@@ -769,8 +769,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "ARKADIOS_ARKADYO",
@@ -779,8 +779,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "ARKADIOS_ARKADYO",
@@ -789,8 +789,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "ARKADIOS_ARKADYO",
@@ -799,8 +799,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "ARKADIOS_ARKADYO",
@@ -809,8 +809,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     },
     {
       "hashtag": "ARKADIOS_ARKADYO",
@@ -819,8 +819,8 @@
       "pages_completed": 0,
       "raw_posts_received": 0,
       "unique_posts_added": 0,
-      "stopped_by_404": true,
-      "error": null
+      "stopped_by_404": false,
+      "error": "HTTP request failed after 4 attempts: HTTP Error 503: Service Unavailable"
     }
   ],
   "source": "https://api.fxtwitter.com/2/search",
